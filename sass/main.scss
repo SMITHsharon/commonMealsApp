@@ -1,2 +1,6 @@
 @import "navbar";
 @import "_meals-list.scss";
+
+body {
+	background-color: $lightgray;
+}

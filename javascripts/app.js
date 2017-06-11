@@ -1,0 +1,1 @@
+var app = angular.module("CommonMealsApp", ["ngAnimate", "ngRoute", "ui.bootstrap", "ngSanitize"]);

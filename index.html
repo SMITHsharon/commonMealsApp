@@ -8,12 +8,18 @@
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 
-<body>
+<body ng-app="CommonMealsApp">
+
 	<h1>Capstone Common Meals App</h1>
+
+	<div ng-include="'partials/navbar.html'"></div>
+		
+	<div ng-view></div>
 
   
 	<!-- 3rd party scripts -->
-  	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  	<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
 	<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="./lib/bower_components/angular/angular.min.js"></script>
@@ -25,12 +31,22 @@
 	<script type="text/javascript" src="./javascripts/AppConfig.js"></script>
 	<script type="text/javascript" src="./javascripts/AppConstants.js"></script>
 
-	<script type="text/javascript" src="./javascripts/factories/ItemFactory.js"></script>
+	<!-- Factories -->
+	<script type="text/javascript" src="./javascripts/factories/AuthFactory.js"></script>
+	<script type="text/javascript" src="./javascripts/factories/UserFactory.js"></script>
+	<script type="text/javascript" src="./javascripts/factories/SchedulingFactory.js"></script>
+	<script type="text/javascript" src="./javascripts/factories/CookTeamFactory.js"></script>
+	<script type="text/javascript" src="./javascripts/factories/SignUpFactory.js"></script>
 
-	<script type="text/javascript" src="./javascripts/controllers/ItemEditCtrl.js"></script>
-	<script type="text/javascript" src="./javascripts/controllers/ItemListCtrl.js"></script>
-	<script type="text/javascript" src="./javascripts/controllers/ItemNewCtrl.js"></script>
-	<script type="text/javascript" src="./javascripts/controllers/ItemViewCtrl.js"></script>
+	<!-- Controllers -->
+	<script type="text/javascript" src="./javascripts/controllers/AuthCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/EditUserCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/MealListCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/MealViewCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/MealAddCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/MealEditCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/MealSignUpCtrl.js"></script>
+	<script type="text/javascript" src="./javascripts/controllers/MealSignUpEditCtrl.js"></script>
 	<script type="text/javascript" src="./javascripts/controllers/NavCtrl.js"></script>
 </body>
 </html>
