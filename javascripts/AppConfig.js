@@ -1,3 +1,4 @@
+
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if(AuthFactory.isAuthenticated()){
 console.log("User is authenticated, resolve route promise");
