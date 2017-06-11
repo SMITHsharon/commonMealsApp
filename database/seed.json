@@ -1,0 +1,537 @@
+{
+    "meals": {
+        "meal0": {
+            "mealDate": "2017-05-31T05:00:00.000Z",
+            "time": "5:00pm",
+            "deadline": "2017-05-30T05:00:00.000Z",
+            "uid": "",
+            "menu": "Hamburgers, Hot Dogs, Chicken, grilled corn-on-the-cob, salad, ice cream",
+            "veggie": "grilled veggies, pasta salad",
+            "estCost": 5.50,
+            "actualCost": "",
+            "comments": "Grilling out for Memorial Day!"
+        },
+        "meal1": {
+            "mealDate": "2017-06-10T05:00:00.000Z",
+            "time": "10:00am",
+            "deadline": "2017-06-08T05:00:00.000Z",
+            "uid": "",
+            "menu": "Baked eggs in wine breakfast; meats; fruit dish; biscuits",
+            "veggie": "Soysage for vegetarians",
+            "estCost": 5.00,
+            "actualCost": "",
+            "comments": "Dot's famous baked eggs in wine"
+        },
+        "meal2": {
+            "mealDate": "2017-07-10T05:00:00.000Z",
+            "time": "6:30pm",
+            "deadline": "2017-07-09T05:00:00.000Z",
+            "uid": "",
+            "menu": "Chicken Marengo, couscous, salad",
+            "veggie": "tofu Marengo",
+            "estCost": 5.50,
+            "actualCost": "",
+            "comments": "Need help w set-up, clean-up!"
+        },
+        "meal3": {
+            "mealDate": "2017-07-13T05:00:00.000Z",
+            "time": "7:00pm",
+            "deadline": "2017-07-12T05:00:00.000Z",
+            "uid": "",
+            "menu": "Grilled Chicken, Rice, and Salad",
+            "veggie": "Grilled Portobellos",
+            "estCost": 5.50,
+            "actualCost": "",
+            "comments": ""
+        },
+        "meal4": {
+            "mealDate": "2017-07-15T05:00:00.000Z",
+            "time": "10:00am",
+            "deadline": "2017-07-13T05:00:00.000Z",
+            "uid": "",
+            "menu": "Eggs, cheese grits, pastries!",
+            "veggie": "",
+            "estCost": 5.00,
+            "actualCost": "",
+            "comments": "Saturday Brunch!"
+        },
+        "meal5": {
+            "mealDate": "2017-07-19T05:00:00.000Z",
+            "time": "6:30pm",
+            "deadline": "2017-07-18T05:00:00.000Z",
+            "uid": "",
+            "menu": "grilled cheese sandwiches, soup, salad",
+            "veggie": "",
+            "estCost": 4.50,
+            "actualCost": "",
+            "comments": "sweet and simple; somebody please bring dessert"
+        },
+        "meal6": {
+            "mealDate": "2017-07-22T05:00:00.000Z",
+            "time": "6:30pm",
+            "deadline": "2017-07-21T05:00:00.000Z",
+            "uid": "",
+            "menu": "salmon, wild rice, salad, pie!, ice cream",
+            "veggie": "grilled veggies, pasta salad",
+            "estCost": 7.00,
+            "actualCost": "",
+            "comments": "Need to know how much salmon to buy by Fri morning"
+        },
+        "meal7": {
+            "mealDate": "2017-07-19T05:00:00.000Z",
+            "time": "6:30pm",
+            "deadline": "2017-07-18T05:00:00.000Z",
+            "uid": "",
+            "menu": "Pizza and galette des rois",
+            "veggie": "",
+            "estCost": 4.50,
+            "actualCost": "",
+            "comments": ""
+        }
+    },
+    "cookTeams": {
+        "cookTeam0": {
+            "mealId": "meal0",
+            "memberId": "user12"
+        },
+        "cookTeam1": {
+            "mealId": "meal0",
+            "memberId": "user9"
+        },
+        "cookTeam2": {
+            "mealId": "meal0",
+            "memberId": "user2"
+        },
+        "cookTeam3": {
+            "mealId": "meal1",
+            "memberId": "user11"
+        },
+        "cookTeam4": {
+            "mealId": "meal1",
+            "memberId": "user0"
+        },
+        "cookTeam5": {
+            "mealId": "meal1",
+            "memberId": "user5"
+        },
+        "cookTeam6": {
+            "mealId": "meal2",
+            "memberId": "user1"
+        },
+        "cookTeam7": {
+            "mealId": "meal2",
+            "memberId": "user0"
+        },
+        "cookTeam8": {
+            "mealId": "meal2",
+            "memberId": "user9"
+        },
+        "cookTeam9": {
+            "mealId": "meal3",
+            "memberId": "user10"
+        },
+        "cookTeam10": {
+            "mealId": "meal3",
+            "memberId": "user4"
+        },
+        "cookTeam11": {
+            "mealId": "meal3",
+            "memberId": "user8"
+        },
+        "cookTeam12": {
+            "mealId": "meal4",
+            "memberId": "user0"
+        },
+        "cookTeam13": {
+            "mealId": "meal4",
+            "memberId": "user11"
+        },
+        "cookTeam14": {
+            "mealId": "meal4",
+            "memberId": "user6"
+        },
+        "cookTeam15": {
+            "mealId": "meal5",
+            "memberId": "user2"
+        },
+        "cookTeam16": {
+            "mealId": "meal5",
+            "memberId": "user10"
+        },
+        "cookTeam17": {
+            "mealId": "meal5",
+            "memberId": "user12"
+        },
+        "cookTeam18": {
+            "mealId": "meal6",
+            "memberId": "user9"
+        },
+        "cookTeam19": {
+            "mealId": "meal6",
+            "memberId": "user0"
+        },
+        "cookTeam20": {
+            "mealId": "meal6",
+            "memberId": "user8"
+        },
+        "cookTeam21": {
+            "mealId": "meal7",
+            "memberId": "user1"
+        },
+        "cookTeam22": {
+            "mealId": "meal7",
+            "memberId": "user7"
+        },
+        "cookTeam23": {
+            "mealId": "meal7",
+            "memberId": "user8"
+        }
+    },
+    "signUps": {
+        "signUp0": {
+            "mealId": "meal2",
+            "memberId": "user1",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp1": {
+            "mealId": "meal2",
+            "memberId": "user0",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp2": {
+            "mealId": "meal2",
+            "memberId": "user9",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp3": {
+            "mealId": "meal2",
+            "memberId": "user3",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp4": {
+            "mealId": "meal2",
+            "memberId": "user7",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp5": {
+            "mealId": "meal2",
+            "memberId": "user12",
+            "regularMeal": true,
+            "veggie": true,
+            "adults": 2,
+            "children": 0,
+            "comments": "one regular meal, one veggie please"
+        },
+        "signUp6": {
+            "mealId": "meal3",
+            "memberId": "user10",
+            "regularMeal": false,
+            "veggie": true,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp7": {
+            "mealId": "meal3",
+            "memberId": "user4",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp8": {
+            "mealId": "meal3",
+            "memberId": "user8",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 4,
+            "children": 0,
+            "comments": "My parents will be joining us for dinner"
+        },
+        "signUp9": {
+            "mealId": "meal3",
+            "memberId": "user1",
+            "regularMeal": false,
+            "veggie": true,
+            "adults": 4,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp10": {
+            "mealId": "meal3",
+            "memberId": "user11",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp11": {
+            "mealId": "meal3",
+            "memberId": "user2",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp12": {
+            "mealId": "meal4",
+            "memberId": "user0",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp13": {
+            "mealId": "meal4",
+            "memberId": "user11",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp14": {
+            "mealId": "meal4",
+            "memberId": "user6",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp15": {
+            "mealId": "meal4",
+            "memberId": "user9",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp16": {
+            "mealId": "meal4",
+            "memberId": "user12",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp17": {
+            "mealId": "meal5",
+            "memberId": "user2",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp18": {
+            "mealId": "meal5",
+            "memberId": "user10",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp19": {
+            "mealId": "meal5",
+            "memberId": "user12",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 2,
+            "comments": ""
+        },
+        "signUp20": {
+            "mealId": "meal5",
+            "memberId": "user11",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp21": {
+            "mealId": "meal5",
+            "memberId": "user6",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp22": {
+            "mealId": "meal6",
+            "memberId": "user9",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp23": {
+            "mealId": "meal6",
+            "memberId": "user0",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp24": {
+            "mealId": "meal6",
+            "memberId": "user8",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp25": {
+            "mealId": "meal6",
+            "memberId": "user1",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp26": {
+            "mealId": "meal7",
+            "memberId": "user1",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 1,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp27": {
+            "mealId": "meal7",
+            "memberId": "user7",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        }
+    },
+    "users": {
+        "user0": {
+            "name" : "Rita",
+            "uid" : "sVEKha8AzLMq1cgg6WgpOFMopT52",
+            "username" : "Rita",
+            "profilePicURL" : "",
+            "unit" : "1"
+        },
+        "user1": {
+            "name" : "Sarah",
+            "uid" : "xxx",
+            "username" : "Sarah",
+            "profilePicURL" : "",
+            "unit" : "2"
+        },
+        "user2": {
+            "name" : "Sharon",
+            "uid" : "kWgpC77KehY6cBou1dQMmeTih282",
+            "username" : "Sharon",
+            "profilePicURL" : "",
+            "unit" : "3"
+        },
+        "user3": {
+            "name" : "John",
+            "uid" : "xxx",
+            "username" : "John",
+            "profilePicURL" : "",
+            "unit" : "4"
+        },
+        "user4": {
+            "name" : "Barbara",
+            "uid" : "xxx",
+            "username" : "Barbara",
+            "profilePicURL" : "",
+            "unit" : "4"
+        },
+        "user5": {
+            "name" : "Mark",
+            "uid" : "xxx",
+            "username" : "Mark",
+            "profilePicURL" : "",
+            "unit" : "5"
+        },
+        "user6": {
+            "name" : "Kats",
+            "uid" : "T6biGdNRxah7GZciYKgibPXrYUu1",
+            "username" : "Kats",
+            "profilePicURL" : "",
+            "unit" : "5"
+        },
+        "user7": {
+            "name" : "Chris",
+            "uid" : "xxx",
+            "username" : "Chris",
+            "profilePicURL" : "",
+            "unit" : "6"
+        },
+        "user8": {
+            "name" : "MaryC",
+            "uid" : "xxx",
+            "username" : "Mary",
+            "profilePicURL" : "",
+            "unit" : "6"
+        },
+        "user9": {
+            "name" : "Rod",
+            "uid" : "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
+            "username" : "Rod",
+            "profilePicURL" : "",
+            "unit" : "7"
+        },
+        "user10": {
+            "name" : "MaryH",
+            "uid" : "xxx",
+            "username" : "Mary",
+            "profilePicURL" : "",
+            "unit" : "8"
+        },
+        "user11": {
+            "name" : "Dot",
+            "uid" : "xxx",
+            "username" : "Dot",
+            "profilePicURL" : "",
+            "unit" : "18"
+        },
+        "user12": {
+            "name" : "Vicki",
+            "uid" : "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
+            "username" : "Vicki",
+            "profilePicURL" : "",
+            "unit" : "23"
+        }
+    }
+}
