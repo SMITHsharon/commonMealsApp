@@ -1,2 +1,10 @@
+.navbar .logo {
+  display: inline-block;
+  width: 50px;
+  margin-top: -8px; }
+
+.navbar .navbar-brand {
+  font-size: 1em; }
+
 body {
   background-color: #EBF2F5; }
