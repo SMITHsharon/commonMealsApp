@@ -7,7 +7,6 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	        JSON.stringify({ 
 	          uid: authData.uid,
 	          username: authData.username,
-	          // name: authData.name,
 	          unit: authData.unit,
 	          profilePicURL: authData.imgURL
 	        })

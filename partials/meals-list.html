@@ -1,0 +1,40 @@
+
+<div class="container">
+  <h4>Hi {{thisUser.username}}</h4>
+  <h4>Meals On Tap</h4>
+  <table class="table">
+    <thead class="thead-default">
+      <tr>
+        <th>Sign Up</th>
+        <th>Meal Date</th>
+        <th>Time</th>
+        <th>Cook Team</th>
+        <th>Menu</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="meal in meals">
+        <th scope="row">1</th>
+        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default signUp">Sign Up</button></a></td>
+        <td>{{meal.mealDate}}</td>
+        <td>{{meal.time}}</td>
+        <td>cook team</td>
+        <td>{{meal.menu}}</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
