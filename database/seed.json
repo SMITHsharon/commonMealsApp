@@ -443,91 +443,78 @@
     },
     "users": {
         "user0": {
-            "name" : "Rita",
             "uid" : "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "username" : "Rita",
             "profilePicURL" : "",
             "unit" : "1"
         },
         "user1": {
-            "name" : "Sarah",
             "uid" : "xxx",
             "username" : "Sarah",
             "profilePicURL" : "",
             "unit" : "2"
         },
         "user2": {
-            "name" : "Sharon",
-            "uid" : "kWgpC77KehY6cBou1dQMmeTih282",
+            "uid" : "LS3viiwPMkNTRCypSZ5Y6tcDYaU2",
             "username" : "Sharon",
             "profilePicURL" : "",
             "unit" : "3"
         },
         "user3": {
-            "name" : "John",
             "uid" : "xxx",
             "username" : "John",
             "profilePicURL" : "",
             "unit" : "4"
         },
         "user4": {
-            "name" : "Barbara",
             "uid" : "xxx",
             "username" : "Barbara",
             "profilePicURL" : "",
             "unit" : "4"
         },
         "user5": {
-            "name" : "Mark",
             "uid" : "xxx",
             "username" : "Mark",
             "profilePicURL" : "",
             "unit" : "5"
         },
         "user6": {
-            "name" : "Kats",
             "uid" : "T6biGdNRxah7GZciYKgibPXrYUu1",
             "username" : "Kats",
             "profilePicURL" : "",
             "unit" : "5"
         },
         "user7": {
-            "name" : "Chris",
             "uid" : "xxx",
             "username" : "Chris",
             "profilePicURL" : "",
             "unit" : "6"
         },
         "user8": {
-            "name" : "MaryC",
             "uid" : "xxx",
-            "username" : "Mary",
+            "username" : "MaryC",
             "profilePicURL" : "",
             "unit" : "6"
         },
         "user9": {
-            "name" : "Rod",
             "uid" : "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "username" : "Rod",
             "profilePicURL" : "",
             "unit" : "7"
         },
         "user10": {
-            "name" : "MaryH",
             "uid" : "xxx",
-            "username" : "Mary",
+            "username" : "MaryH",
             "profilePicURL" : "",
             "unit" : "8"
         },
         "user11": {
-            "name" : "Dot",
             "uid" : "xxx",
             "username" : "Dot",
             "profilePicURL" : "",
             "unit" : "18"
         },
         "user12": {
-            "name" : "Vicki",
             "uid" : "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "username" : "Vicki",
             "profilePicURL" : "",
