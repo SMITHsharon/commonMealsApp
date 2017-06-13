@@ -14,7 +14,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="meal in meals | isAfter:date | filter: isSignedUp">
+      <tr ng-repeat="meal in meals | isAfter:date">
+      <!-- <tr ng-repeat="meal in meals | isAfter:date | filter: isSignedUp"> -->
       <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
         <!-- <th scope="row">1</th> -->
         <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default btn-xs signUp">Sign Up</button></a></td>
@@ -22,7 +23,9 @@
         <!-- change seed file and use this if implement timepicker in ADD function -->
         <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
         <td>{{meal.time}}</td>
-        <td>cook team</td>
+
+        <td ng-repeat="cook in cooks | filter: meal.id">{{memberName}}</td>
+        <!-- <td ng-repeat="cook in cooks | filter: meal.id">{{cook.memberId}}</td> -->
         <td>{{meal.menu}}</td>
       </tr>
     </tbody>
@@ -41,6 +44,7 @@
       </tr>
     </thead>
     <tbody>
+      <!-- <tr ng-repeat="meal in meals | isAfter:date | filter: signUps.mealId"> -->
       <tr ng-repeat="meal in meals | isAfter:date | filter: isSignedUp">
       <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
         <!-- <th scope="row">1</th> -->
