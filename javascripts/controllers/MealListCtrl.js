@@ -1,4 +1,5 @@
-app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, CookTeamFactory, SignUpFactory) {
+// app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, CookTeamFactory, SignUpFactory, UserFactory) {
+app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, UserFactory) {
 
 	$scope.meals = [];
 	$scope.cooks = [];
@@ -14,27 +15,68 @@ app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, C
 		// 	  // No user is signed in.
 		// 	}
 
-	   	UserFactory.getUser().then((user) => {
+	   	UserFactory.getUser($rootScope.user.uid).then((user) => {
 	   	// UserFactory.getUser($rootScope.user.uid).then((user) => {
 console.log("user :: ", user);
-console.log("user.username :: ", username);
+console.log("user.username :: ", user.username);
+console.log("user.id :: ", user.id);
 	      $scope.thisUser.username = user.username;
+// $scope.thisUser.id = user.id;
 
 	    }).catch();
 	};
-    getUserInfo();
+    // getUserInfo();
 
 
     let getMeals = () => {
+    	getUserInfo();
  		// calling getUser to get the userId is technically better then using $rootScope
-		SchedulingFactory.getMealList($rootScope.user.uid).then((mealz) => {
-		  $scope.meals=mealz;
-		  // for loop :: get cook team
-		  
+		SchedulingFactory.getMealList().then((mealz) => {
+			$scope.meals=mealz;
+			// get cook team for each meal
+			// for (let i=0; i<$scope.meals.length; i++) {
+			// 	getCooks($scope.meals[i].id);
+			// }
+
+			// get meals current user has signed-up for 
+			// for (let i=0; i<$scope.signups.length; i++) {
+			// 	getUserSignUps($rootScope.user.uid);
+			// }
+console.log("meals :: ", meals);
+
 		}).catch((error) => {
 		  console.log("get Meals", error);
 		});
 	};
 	getMeals();
+
+
+	let getCooks = (mealId) => {
+		CookTeamFactory.getCookTeam(mealId)
+		.then((cookz) => {
+			cookz.forEach((cook) => {
+				$scope.cooks.push(cook);
+			});
+console.log("cooks :: ", cooks);
+			// for each cook, get cook name
+		})
+		.catch((error) => {
+			console.log("error on getCooks", error);
+		});
+	};
+
+
+	let getUserSignUps = (userId) => {
+		SignUpFactory.getUserSignUpz(userId)
+		.then((signUpz) => {
+			signUpz.forEach((signUp) => {
+				$scope.signUps.push(signUp);
+			});		
+console.log("signUps :: ", signUps);
+		})
+		.catch((error) => {
+			console.log("error on getUserSignUps", error);
+		});
+	};
 
 });

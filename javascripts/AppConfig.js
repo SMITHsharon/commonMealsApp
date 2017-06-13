@@ -38,6 +38,17 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthFactory) {
 });
 
 
+// my filters
+app.filter('isAfter', function() {
+  return function(meals, dateAfter) {
+    // Using ES6 filter method
+    return meals.filter(function(meal){
+      return moment(meal.mealDate).isAfter(dateAfter);
+    });
+  };
+});
+
+
 app.config(function($routeProvider) {
   $routeProvider
     .when('/auth', {

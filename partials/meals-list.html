@@ -1,5 +1,6 @@
 
 <div class="container">
+
   <h4>Hi {{thisUser.username}}</h4>
   <h4>Meals On Tap</h4>
   <table class="table">
@@ -13,28 +14,45 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="meal in meals">
-        <th scope="row">1</th>
-        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default signUp">Sign Up</button></a></td>
-        <td>{{meal.mealDate}}</td>
+      <tr ng-repeat="meal in meals | isAfter:date">
+      <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
+        <!-- <th scope="row">1</th> -->
+        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default btn-xs signUp">Sign Up</button></a></td>
+        <td>{{meal.mealDate | date : format : shortDate}}</td>
+        <!-- change seed file and use this if implement timepicker in ADD function -->
+        <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
         <td>{{meal.time}}</td>
         <td>cook team</td>
         <td>{{meal.menu}}</td>
       </tr>
+    </tbody>
+  </table>
+
+
+  <h4>Meals You've Signed Up For</h4>
+  <table class="table">
+    <thead class="thead-default">
       <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-        <td>@mdo</td>
+        <th>Sign Up</th>
+        <th>Meal Date</th>
+        <th>Time</th>
+        <th>Cook Team</th>
+        <th>Menu</th>
       </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-        <td>@mdo</td>
+    </thead>
+    <tbody>
+      <tr ng-repeat="meal in meals">
+      <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
+        <!-- <th scope="row">1</th> -->
+        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default btn-xs signUp">Sign Up</button></a></td>
+        <td>{{meal.mealDate | date : format : shortDate}}</td>
+        <!-- change seed file and use this if implement timepicker in ADD function -->
+        <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
+        <td>{{meal.time}}</td>
+        <td>cook team</td>
+        <td>{{meal.menu}}</td>
       </tr>
+
     </tbody>
   </table>
 </div>
