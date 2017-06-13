@@ -1,5 +1,5 @@
 // app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, CookTeamFactory, SignUpFactory, UserFactory) {
-app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, UserFactory) {
+app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, SignUpFactory, UserFactory) {
 
 	$scope.meals = [];
 	$scope.cooks = [];
@@ -39,13 +39,12 @@ console.log("user.id :: ", user.id);
 			// }
 
 			// get meals current user has signed-up for 
-			// for (let i=0; i<$scope.signups.length; i++) {
-			// 	getUserSignUps($rootScope.user.uid);
-			// }
-console.log("meals :: ", meals);
+			getUserSignUps($rootScope.user.uid);
+			
+console.log("$scope.meals :: ", $scope.meals);
 
 		}).catch((error) => {
-		  console.log("get Meals", error);
+		  console.log("getMeals", error);
 		});
 	};
 	getMeals();
@@ -72,7 +71,7 @@ console.log("cooks :: ", cooks);
 			signUpz.forEach((signUp) => {
 				$scope.signUps.push(signUp);
 			});		
-console.log("signUps :: ", signUps);
+console.log("$scope.signUps :: ", $scope.signUps);
 		})
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);
