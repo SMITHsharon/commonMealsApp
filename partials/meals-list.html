@@ -24,7 +24,7 @@
         <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
         <td>{{meal.time}}</td>
 
-        <td ng-repeat="cook in cooks | filter: meal.id">{{memberName}}</td>
+        <td class="cookNames"><span ng-repeat="cook in meal.cookNames | filter: meal.id">{{cook.name}}</span></td>
         <!-- <td ng-repeat="cook in cooks | filter: meal.id">{{cook.memberId}}</td> -->
         <td>{{meal.menu}}</td>
       </tr>

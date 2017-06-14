@@ -53,7 +53,7 @@ app.filter('isSignedUp', function() {
 console.log("meal.id // signUp.mealId :: ", meal.id, signUp.Id);
     if (meal.id === signUp.mealId) {
       return true;
-    };
+    }
   };
 });
 
