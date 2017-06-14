@@ -2,12 +2,11 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 
 	let addUser = (authData) => {
 	    return $q((resolve, reject) => {
-	      console.log("consoling auth", authData);
+// console.log("consoling auth", authData);
 	      $http.post(`${FIREBASE_CONFIG.databaseURL}/users.json`, 
 	        JSON.stringify({ 
 	          uid: authData.uid,
 	          username: authData.username,
-	          // name: authData.name,
 	          unit: authData.unit,
 	          profilePicURL: authData.imgURL
 	        })
@@ -22,7 +21,7 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	};
 
 
-  	let getUser = (userId) =>{
+  	let getUser = (userId) => {
 	    return $q((resolve, reject) => {
 	      $http.get(`${FIREBASE_CONFIG.databaseURL}/users.json?orderBy="uid"&equalTo="${userId}"`)
 	        .then((userObject) => {
@@ -32,6 +31,27 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	            users[0].id = key;
 	          });
 	          resolve(users[0]);
+	        })
+	        .catch((error) => {
+	          reject(error);
+	        });
+	    });
+	};
+
+
+	let getThisMemberName = (memberId) => {
+// console.log("memberId :: ", memberId);
+		return $q((resolve, reject) => {
+	      $http.get(`${FIREBASE_CONFIG.databaseURL}/users.json?orderBy="uid"&equalTo="${memberId}"`)
+	        .then((userObject) => {
+// console.log("userObject :: ", userObject);
+	          let users = [];
+	          Object.keys(userObject.data).forEach((key) => {
+	            users.push(userObject.data[key]);
+	            users[0].id = key;
+	          });
+	          // this returns the user's profile
+	          resolve(users[0].username);
 	        })
 	        .catch((error) => {
 	          reject(error);
@@ -70,6 +90,7 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	return {
 		addUser:addUser, 
 		getUser:getUser, 
+		getThisMemberName:getThisMemberName,
 		editUser:editUser, 
 		editEmail:editEmail
 	};

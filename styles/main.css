@@ -6,5 +6,8 @@
 .navbar .navbar-brand {
   font-size: 1em; }
 
+table td .cookNames {
+  padding-right: 5px; }
+
 body {
   background-color: #EBF2F5; }

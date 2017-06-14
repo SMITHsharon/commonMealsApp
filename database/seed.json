@@ -23,9 +23,9 @@
             "comments": "Dot's famous baked eggs in wine"
         },
         "meal2": {
-            "mealDate": "2017-07-10T05:00:00.000Z",
+            "mealDate": "2017-06-15T05:00:00.000Z",
             "time": "6:30pm",
-            "deadline": "2017-07-09T05:00:00.000Z",
+            "deadline": "2017-06-13T05:00:00.000Z",
             "uid": "",
             "menu": "Chicken Marengo, couscous, salad",
             "veggie": "tofu Marengo",
@@ -92,15 +92,15 @@
     "cookTeams": {
         "cookTeam0": {
             "mealId": "meal0",
-            "memberId": "user12"
+            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2"
         },
         "cookTeam1": {
             "mealId": "meal0",
-            "memberId": "user9"
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1"
         },
         "cookTeam2": {
             "mealId": "meal0",
-            "memberId": "user2"
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2"
         },
         "cookTeam3": {
             "mealId": "meal1",
@@ -108,7 +108,7 @@
         },
         "cookTeam4": {
             "mealId": "meal1",
-            "memberId": "user0"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam5": {
             "mealId": "meal1",
@@ -120,11 +120,11 @@
         },
         "cookTeam7": {
             "mealId": "meal2",
-            "memberId": "user0"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam8": {
             "mealId": "meal2",
-            "memberId": "user9"
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1"
         },
         "cookTeam9": {
             "mealId": "meal3",
@@ -140,7 +140,7 @@
         },
         "cookTeam12": {
             "mealId": "meal4",
-            "memberId": "user0"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam13": {
             "mealId": "meal4",
@@ -148,11 +148,11 @@
         },
         "cookTeam14": {
             "mealId": "meal4",
-            "memberId": "user6"
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
         },
         "cookTeam15": {
             "mealId": "meal5",
-            "memberId": "user2"
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2"
         },
         "cookTeam16": {
             "mealId": "meal5",
@@ -160,15 +160,15 @@
         },
         "cookTeam17": {
             "mealId": "meal5",
-            "memberId": "user12"
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2"
         },
         "cookTeam18": {
             "mealId": "meal6",
-            "memberId": "user9"
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
         },
         "cookTeam19": {
             "mealId": "meal6",
-            "memberId": "user0"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam20": {
             "mealId": "meal6",
@@ -180,7 +180,7 @@
         },
         "cookTeam22": {
             "mealId": "meal7",
-            "memberId": "user7"
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1"
         },
         "cookTeam23": {
             "mealId": "meal7",
@@ -199,7 +199,7 @@
         },
         "signUp1": {
             "mealId": "meal2",
-            "memberId": "user0",
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -208,7 +208,7 @@
         },
         "signUp2": {
             "mealId": "meal2",
-            "memberId": "user9",
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -235,7 +235,7 @@
         },
         "signUp5": {
             "mealId": "meal2",
-            "memberId": "user12",
+            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "regularMeal": true,
             "veggie": true,
             "adults": 2,
@@ -289,7 +289,7 @@
         },
         "signUp11": {
             "mealId": "meal3",
-            "memberId": "user2",
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -298,7 +298,7 @@
         },
         "signUp12": {
             "mealId": "meal4",
-            "memberId": "user0",
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -316,7 +316,7 @@
         },
         "signUp14": {
             "mealId": "meal4",
-            "memberId": "user6",
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -325,7 +325,7 @@
         },
         "signUp15": {
             "mealId": "meal4",
-            "memberId": "user9",
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -334,7 +334,7 @@
         },
         "signUp16": {
             "mealId": "meal4",
-            "memberId": "user12",
+            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -343,7 +343,7 @@
         },
         "signUp17": {
             "mealId": "meal5",
-            "memberId": "user2",
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -361,7 +361,7 @@
         },
         "signUp19": {
             "mealId": "meal5",
-            "memberId": "user12",
+            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -379,7 +379,7 @@
         },
         "signUp21": {
             "mealId": "meal5",
-            "memberId": "user6",
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -388,7 +388,7 @@
         },
         "signUp22": {
             "mealId": "meal6",
-            "memberId": "user9",
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -397,7 +397,7 @@
         },
         "signUp23": {
             "mealId": "meal6",
-            "memberId": "user0",
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,

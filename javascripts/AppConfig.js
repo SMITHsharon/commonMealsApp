@@ -1,10 +1,8 @@
 
 let isAuth = (AuthFactory) => new Promise ((resolve, reject) => {
   if(AuthFactory.isAuthenticated()){
-console.log("User is authenticated, resolve route promise");
     resolve();
   } else {
-console.log("User is not authenticated, reject route promise");
     reject();
   }
 });
@@ -37,6 +35,35 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthFactory) {
       $location.path('/auth');
     }
   });
+});
+
+
+// my filters
+app.filter('isAfter', function() {
+  return function(meals, dateAfter) {
+    // Using ES6 filter method
+    return meals.filter(function(meal){
+      return moment(meal.mealDate).isAfter(dateAfter);
+    });
+  };
+});
+
+// app.filter('afterDeadline', function() {
+//   return function(meals, dateAfter) {
+//     // Using ES6 filter method
+//     return meals.filter(function(meal){
+//       return moment(meal.deadline).isAfter(dateAfter);
+//     });
+//   };
+// });
+
+app.filter('isSignedUp', function() {
+  return function(meals, signUps) {
+console.log("meal.id // signUp.mealId :: ", meal.id, signUp.Id);
+    if (meal.id === signUp.mealId) {
+      return true;
+    }
+  };
 });
 
 

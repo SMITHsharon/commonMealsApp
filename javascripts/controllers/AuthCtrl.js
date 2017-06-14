@@ -20,7 +20,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $routeParams, $scope,
 	      $scope.alerts.push({msg: error.message});
 	    }).then((user) => {
 	      $rootScope.user = user;
-	      $location.url('/pins/list');
+	      $location.url('/meals/list');
 	    }).catch();
 	  };
 	  
