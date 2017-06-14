@@ -19,15 +19,9 @@
       <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
         <!-- <th scope="row">1</th> -->
         
-        <!-- <td><a href="#!/meal/signup/:{{meal.mealId}}"><button ng-show="meal.deadline > CurrentDate.getTime()" type="button class="btn btn-default btn-xs signUp">Sign Up</button></a></td> -->
-        
-        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-default btn-xs signUp">Sign Up</button></a></td>
-        
-        <!-- <td><a href="#!/meal/signup/:{{meal.mealId}}"><button ng-if="meal.deadline > date.getDate()" class="btn btn-default btn-xs signUp">Sign Up</button></a></td> -->
+        <td><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-default btn-xs signUp">Sign Up</button></a></td>
 
-        
-
-        <td>{{meal.mealDate | date : format : shortDate}}</td>
+        <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
         <!-- change seed file and use this if implement timepicker in ADD function -->
         <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
         <td>{{meal.time}}</td>
