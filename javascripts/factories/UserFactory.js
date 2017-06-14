@@ -2,7 +2,7 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 
 	let addUser = (authData) => {
 	    return $q((resolve, reject) => {
-	      console.log("consoling auth", authData);
+// console.log("consoling auth", authData);
 	      $http.post(`${FIREBASE_CONFIG.databaseURL}/users.json`, 
 	        JSON.stringify({ 
 	          uid: authData.uid,

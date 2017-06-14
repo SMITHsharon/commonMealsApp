@@ -48,6 +48,15 @@ app.filter('isAfter', function() {
   };
 });
 
+// app.filter('afterDeadline', function() {
+//   return function(meals, dateAfter) {
+//     // Using ES6 filter method
+//     return meals.filter(function(meal){
+//       return moment(meal.deadline).isAfter(dateAfter);
+//     });
+//   };
+// });
+
 app.filter('isSignedUp', function() {
   return function(meals, signUps) {
 console.log("meal.id // signUp.mealId :: ", meal.id, signUp.Id);

@@ -23,9 +23,9 @@
             "comments": "Dot's famous baked eggs in wine"
         },
         "meal2": {
-            "mealDate": "2017-07-10T05:00:00.000Z",
+            "mealDate": "2017-06-15T05:00:00.000Z",
             "time": "6:30pm",
-            "deadline": "2017-07-09T05:00:00.000Z",
+            "deadline": "2017-06-13T05:00:00.000Z",
             "uid": "",
             "menu": "Chicken Marengo, couscous, salad",
             "veggie": "tofu Marengo",

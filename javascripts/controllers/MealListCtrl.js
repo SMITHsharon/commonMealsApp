@@ -4,15 +4,17 @@ app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, C
 	$scope.meals = [];
 	$scope.cooks = [];
 	$scope.signUps = [];
+	// $scope.keys = [];
 	$scope.thisUser = {};
+	$scope.CurrentDate = {};
 
 
 	let getUserInfo = () => {
 
 	   	UserFactory.getUser($rootScope.user.uid).then((user) => {
-console.log("user :: ", user);
-console.log("user.username :: ", user.username);
-console.log("user.id :: ", user.id);
+// console.log("user :: ", user);
+// console.log("user.username :: ", user.username);
+// console.log("user.id :: ", user.id);
 	    	$scope.thisUser.username = user.username;
 
 	    }).catch();
@@ -30,8 +32,8 @@ console.log("user.id :: ", user.id);
 			for (let i=0; i<$scope.meals.length; i++) {
 				// getCooks($scope.meals[i].id);
 				CookTeamFactory.getCookTeam($scope.meals[i].id)
-				.then((monkey) => {
-					$scope.meals[i].cookNames = monkey;
+				.then((cookNamez) => {
+					$scope.meals[i].cookNames = cookNamez;
 				})
 				.catch((error) => {
 					console.log("error on getCookTeam", error);
@@ -82,6 +84,14 @@ console.log("$scope.meals :: ", $scope.meals);
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);
 		});
+	};
+
+
+	// function provides the conditional based on deadline, 
+	// whether to show the <Sign Up> button
+	$scope.isAfterDeadline = (meal) => {
+		let currentDate = new Date();
+		return moment(meal.deadline).isAfter(moment(currentDate));
 	};
 
 });
