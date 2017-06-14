@@ -26,6 +26,7 @@ app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG)
 	            			// cookName.name = thizName;
 	            			// cookName.mealId = cook.mealId;
 	            			cookNamez.push(thizName);
+	            			// cookz["name"] = thizName;
 	            		})
 	            		.catch((error) => {
 	            			reject(error);
