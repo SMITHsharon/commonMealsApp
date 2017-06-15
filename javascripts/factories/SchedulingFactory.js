@@ -39,9 +39,24 @@ console.log("SchedulingFactory.getSingleMeal // id :: ", id);
  	};
 
 
+ 	let postNewMeal = (newMeal) => {
+		return $q((resolve, reject) => {
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/meals.json`, JSON.stringify(newMeal))
+			.then((resultz) => {
+				resolve(resultz);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+		});
+	};
+
+
+
  	return {
  		getMealList:getMealList,
- 		getSingleMeal:getSingleMeal
+ 		getSingleMeal:getSingleMeal,
+ 		postNewMeal:postNewMeal
  	};
 
 });

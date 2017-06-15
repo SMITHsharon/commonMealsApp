@@ -14,7 +14,7 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	            	signUpz.forEach((signUp) => {
 	            		UserFactory.getThisMemberName(signUp.memberId)
 	            		.then((thizName) => {
-	            			signUp["name"] = thizName;
+	            			signUp.name = thizName;
 	            		})
 	            		.catch((error) => {
 	            			reject(error);

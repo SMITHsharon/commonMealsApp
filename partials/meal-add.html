@@ -1,0 +1,50 @@
+<div class="container">
+
+    <h4>New Meal / Specs</h4>
+    <form>
+        <div class="input-group">
+            <label>Meal Date</label>
+            <input type="date" class="form-control" uib-datepicker-popup ng-model="newMeal.mealDate" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+    
+<!-- <input type="text" class="form-control" placeholder="Meal Date"ng-model="newMeal.task"/> -->
+        </div>
+        <div class="form-group">
+            <label>Time</label>
+            <input type="text" class="form-control" uib-timepicker ng-model="newMeal.time" ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"/>
+            <!-- <input type="text" class="form-control" placeholder="Time" ng-model="newMeal.time"/> -->
+        </div>
+
+        <div >
+            <label>Deadline</label>
+            <input type="date" class="form-control" uib-datepicker-popup ng-model="newMeal.deadline" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+<!-- {{mytime | date:'shortTime' }} -->
+        </div>
+            <!-- <span class="input-group-btn"> -->
+        <div>
+            <label>Menu</label>
+                <input type="text" class="form-control" placeholder="Menu" ng-model="newMeal.menu"/>
+        </div>
+
+        <div>
+            <label>Veggie Option</label>
+                <input type="text" class="form-control" placeholder="Veggie Option" ng-model="newMeal.veggie"/>
+        </div>
+
+        <div>
+            <label>Estimated Cost</label>
+                <input type="text" class="form-control" placeholder="Estimated Cost" ng-model="newMeal.estCost"/>
+        </div>
+<!-- <button type="button" class="btn btn-default" ng-click="isOpened2 = !isOpened2"><i class="glyphicon glyphicon-calendar"></i></button> -->
+        <!-- </span> -->
+
+
+        <!-- Multi-Select Drop Down for Cook Team -->
+
+        <button class="btn btn-default btn-sm" ng-click="addNewMeal()">Add Meal</button>
+
+        <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
+
+        <!-- checkbox here :: Commit to History -->
+
+    </form>
+</div>
