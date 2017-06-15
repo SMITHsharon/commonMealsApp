@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="meal in meals | isAfter:date">
+      <tr ng-repeat="meal in meals | filter:{userSignedUp:false} | isAfter:date">
       <!-- <tr ng-repeat="meal in meals | isAfter:date | filter: isSignedUp"> -->
       <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
         <!-- <th scope="row">1</th> -->
@@ -32,11 +32,11 @@
         <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
         <td>{{meal.time}}</td>
 
-        <section ng-repeat="(cookName, prop) in meals">
+        <!-- <section ng-repeat="(cookName, prop) in meals">
           <td class="cookNames"><span ng-repeat="val in cookName" | filter: meal.id">{{cookName}}</span></td>
-        </section>
+        </section> -->
         <!-- <td class="cookNames"><span ng-repeat="val in meal.cookNames[$index] | filter: meal.id">{{val}}</span></td> -->
-        <!-- <td class="cookNames"><span ng-repeat="cookName in meal.cookNames | filter: meal.id">{{cookname}}</span></td> -->
+        <td class="cookNames"><span ng-repeat="cookName in meal.cookNames">{{cookName}}</span></td>
         <!-- <td ng-repeat="cook in cooks | filter: meal.id">{{cook.memberId}}</td> -->
         <td>{{meal.menu}}</td>
       </tr>
@@ -57,7 +57,7 @@
     </thead>
     <tbody>
       <!-- <tr ng-repeat="meal in meals | isAfter:date | filter: signUps.mealId"> -->
-      <tr ng-repeat="meal in meals | isAfter:date | filter: isSignedUp">
+      <tr ng-repeat="meal in meals | isAfter:date | filter:{userSignedUp:true}">
       <!-- <tr ng-repeat="meal in meals" | filter: deadlineFilter | filter: signUpFilter> -->
         <!-- <th scope="row">1</th> -->
         

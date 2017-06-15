@@ -38,6 +38,13 @@ app.controller("MealListCtrl", function($rootScope, $scope, SchedulingFactory, C
 				.catch((error) => {
 					console.log("error on getCookTeam", error);
 				});
+				SignUpFactory.isUserSignedUp($rootScope.user.uid, $scope.meals[i].id)
+				.then((uzerSignedUp) => {
+					$scope.meals[i].userSignedUp = uzerSignedUp;
+				})
+				.catch((error) => {
+					console.log("error on isUserSignedUp", error);
+				});
 			}
 console.log("$scope.meals :: ", $scope.meals);
 			// get meals current user has signed-up for 
@@ -50,27 +57,6 @@ console.log("$scope.meals :: ", $scope.meals);
 		});
 	};
 	getMeals();
-
-
-	let getCooks = (mealId) => {
-		CookTeamFactory.getCookTeam(mealId)
-		// CookTeamFactory.getCookTeam(mealId, $scope.meals)
-		.then((cookz) => {
-// console.log("then cookz :: ",cookz);
-		for (let i=0; i<cookz.length; i++) {
-			console.log("cooks / i :: ", cooks[i]);
-			// cookz.forEach((cook) => {
-		}
-// console.log("in forEach // cook :: ", cook);
-				// $scope.cooks.push(cook);
-			// });
-// console.log("$scope.cooks :: ", $scope.cooks);
-				// $scope.cooks = cookz;
-		})
-		.catch((error) => {
-			console.log("error on getCooks", error);
-		});
-	};
 
 
 	let getUserSignUps = (userId) => {
