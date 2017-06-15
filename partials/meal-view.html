@@ -1,0 +1,49 @@
+<div class="container">
+	<h2>What's for Dinner?</h2>
+	<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
+	<h5>Time: {{thisMeal.time}}</h5>
+	<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
+	<h5>Cook Team: cook team</h5>
+	<h4>Menu: {{thisMeal.menu}}</h4>
+	<h4>Veggie Option: {{thisMeal.veggie}}</h4>
+	<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
+	<h5>Actual Cost: tbd</h5>
+
+    <button type="button" class="btn btn-warning btn-xs deleteMeal" ng-click="deleteMeal(meal.id)">Delete Meal</button>
+							
+	<button type="button" class="btn btn-default btn-xs editMeal" ng-click="editMeal(meal.id)">Edit Meal</button>
+
+
+	<h2>Guest List</h2>
+	<table class="table">
+	    <thead class="thead-default">
+			<tr>
+		       <th></th>
+		       <th></th>
+		       <th># Adults</th>
+		       <th># Children</th>
+		       <th>Regular Meal</th>
+		       <th>Veggie</th>
+			</tr>
+	    </thead>
+	    <tbody>
+	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
+	        
+	        	<td><a href="#!/meal/edit/:{{meal.mealId}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign Up</button></a></td>
+
+		        <!-- show guest name here -->
+		        <td>{{signUp.name}}</a></td>
+		        <td>{{signUp.adults}}</td>
+		        <td>{{signUp.children}}</td>
+		        <td ng-show="signUp.regularMeal">yes</td>
+		        <td ng-show="!signUp.regularMeal">no</td>
+		        <td ng-show="signUp.veggie">yes</td>
+		        <td ng-show="!signUp.veggie">no</td>
+	      	</tr>
+	    </tbody>
+	</table>
+
+	<!-- if user is on cook team ... add buttons for Edit Meal, Delete Meal -->
+	<a href="#!/meal/signup/:{{thisMeal.mealId}}"><button class="btn btn-primary btn-xs signUp">Sign Up</button></a>
+	<!-- if user is signed-up ... add button to Delete Sign-Up -->
+</div>
