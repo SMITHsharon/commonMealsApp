@@ -44,6 +44,8 @@ console.log("SchedulingFactory.getSingleMeal // id :: ", id);
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/meals.json`, JSON.stringify(newMeal))
 			.then((resultz) => {
 console.log("postNewMeal resultz :: ", resultz);
+console.log("postNewMeal resultz.data :: ", resultz.data);
+console.log("postNewMeal resultz.key :: ", resultz.key);
 				resolve(resultz);
 			})
 			.catch((error) => {
