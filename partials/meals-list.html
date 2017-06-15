@@ -3,7 +3,7 @@
 
   <h4>Hi {{thisUser.username}}</h4>
   <h4>Meals On Tap</h4>
-  <table class="table">
+  <table class="table table-condensed">
     <thead class="thead-default">
       <tr>
         <th>Sign Up</th>
@@ -33,13 +33,14 @@
         <!-- <td class="cookNames"><span ng-repeat="cookName in meal.cookNames | filter: meal.id">{{cookname}}</span></td> -->
         <!-- <td ng-repeat="cook in cooks | filter: meal.id">{{cook.memberId}}</td> -->
         <td>{{meal.menu}}</td>
+        <td>{{meal.veggie}}</td>
       </tr>
     </tbody>
   </table>
 
 
   <h4>Meals You've Signed Up For</h4>
-  <table class="table">
+  <table class="table table-condensed">
     <thead class="thead-default">
       <tr>
         <th>Sign Up</th>
@@ -63,6 +64,7 @@
         <td>{{meal.time}}</td>
         <td>cook team</td>
         <td>{{meal.menu}}</td>
+        <td>{{meal.veggie}}</td>
       </tr>
 
     </tbody>

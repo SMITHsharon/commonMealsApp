@@ -6,7 +6,9 @@ app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope,
 		// calling getuser() better than using $rootScope ...
 		$scope.newMeal.uid = $rootScope.user.uid;
 		SchedulingFactory.postNewMeal($scope.newMeal)
-		.then((response) => {
+		.then((postedMeal) => {
+console.log("postedMeal :: ", postedMeal);
+console.log("postedMeal.id :: ", postedMeal.id);
 			$scope.newMeal = {};
 			$location.url("/meals/list");
 		})
