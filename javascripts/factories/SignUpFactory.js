@@ -31,6 +31,7 @@ console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz
  	};
 
 
+
 	let getUserSignUpz = (userId) => {
 	// let getMealList = (userId) => {
 	    let signUpz = [];
