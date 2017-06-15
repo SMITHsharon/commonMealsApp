@@ -21,7 +21,7 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	            		});
 	            	});
 	          	}
-console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz);
+// console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz);
 	          	resolve(signUpz);
 	      	})
 	      	.catch((error) => {
@@ -29,6 +29,7 @@ console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz
 	      	});
 	    });
  	};
+
 
 
 	let getUserSignUpz = (userId) => {

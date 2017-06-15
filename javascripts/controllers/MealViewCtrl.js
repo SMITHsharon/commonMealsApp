@@ -33,14 +33,27 @@ console.log("signUpz", signUpz);
 		 	console.log("error on getSignUpList", error);
 		});
 
+// delete Meal :: also delete Cook Team members + delete Meal Sign-Ups
+	let deleteCookTeam = (mealId) => {
+		console.log("in deleteCookTeam");
+	};
 
-	$scope.deleteMeal = (id) => {
-		SchedulingFactory.deletz(id).then(() => {
-			// delete Cook Team members
-			// delete Sign-Ups 
-			getMeals();
+
+	let deleteSignUps = (mealId) => {
+		console.log("in deleteSignUps");
+	};
+
+
+	$scope.deleteMeal = (mealId) => {
+
+		deleteCookTeam(mealId);
+		deleteSignUps(mealId);
+		// delete Meal
+		SchedulingFactory.deletzMeal(mealId).then(() => {
+console.log("returned from deletzMeal");
+			// $location.url('/meals/list');
 		}).catch((error) => {
-			console.log("deleteMeal error", error);
+			console.log("error on deleteMeal", error);
 		});
 	};
 

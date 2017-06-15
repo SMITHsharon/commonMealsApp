@@ -56,9 +56,11 @@ console.log("postNewMeal resultz.key :: ", resultz.key);
 
 
 	let deletzMeal = (id) => {
+console.log("deletzMeal // id :: ", id);
 		return $q((resolve, reject) => {
 			$http.delete(`${FIREBASE_CONFIG.databaseURL}/meals/${id}.json`)
 			.then((resultz) => {
+console.log("deletzMeal // resultz :: ", resultz);
 				resolve(resultz);
 			})
 			.catch((error) => {
