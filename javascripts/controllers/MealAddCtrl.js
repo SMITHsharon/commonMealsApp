@@ -1,4 +1,6 @@
-app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope, FIREBASE_CONFIG, SchedulingFactory, CookTeamFactory) {
+app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope, FIREBASE_CONFIG, SchedulingFactory, UserFactory, CookTeamFactory) {
+
+	$scope.members = [];
 
 	$scope.addNewMeal = () => {
 		// calling getuser() better than using $rootScope ...
@@ -12,5 +14,19 @@ app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope,
 			console.log("error on addNewMeal", error);
 		});
 	};
+
+
+	let getMembers = () => {
+		UserFactory.getMemberList()
+		.then((memberz) => {
+			$scope.members = memberz;
+console.log("$scope.members :: ", $scope.members);
+		})
+
+		.catch((error) => {
+			console.log("error on getMemberList", error);
+		});
+	};
+	getMembers();
 
 });
