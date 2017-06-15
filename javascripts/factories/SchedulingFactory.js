@@ -5,7 +5,6 @@ app.factory("SchedulingFactory", function($http, $q, FIREBASE_CONFIG) {
 	    let mealz = [];
 	    return $q((resolve, reject) => {
 	      	$http.get(`${FIREBASE_CONFIG.databaseURL}/meals.json?orderBy="mealDate"`)
-	      	// $http.get(`${FIREBASE_CONFIG.databaseURL}/meals.json?orderBy="mealId"&equalTo="${mealDate}"`)
 	      	.then((fbMeals) => {
 	        	let mealCollection = fbMeals.data;
 	        	if(mealCollection !== null ) {
