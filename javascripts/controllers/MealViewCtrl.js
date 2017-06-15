@@ -34,7 +34,15 @@ console.log("signUpz", signUpz);
 		});
 
 
-	
+	$scope.deleteMeal = (id) => {
+		SchedulingFactory.deletz(id).then(() => {
+			// delete Cook Team members
+			// delete Sign-Ups 
+			getMeals();
+		}).catch((error) => {
+			console.log("deleteMeal error", error);
+		});
+	};
 
 
 });

@@ -52,11 +52,25 @@ console.log("SchedulingFactory.getSingleMeal // id :: ", id);
 	};
 
 
+	let deletzMeal = (id) => {
+		return $q((resolve, reject) => {
+			$http.delete(`${FIREBASE_CONFIG.databaseURL}/meals/${id}.json`)
+			.then((resultz) => {
+				resolve(resultz);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+		});
+	};
+
+
 
  	return {
  		getMealList:getMealList,
  		getSingleMeal:getSingleMeal,
- 		postNewMeal:postNewMeal
+ 		postNewMeal:postNewMeal,
+ 		deletzMeal:deletzMeal
  	};
 
 });
