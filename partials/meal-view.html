@@ -3,7 +3,8 @@
 	<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
 	<h5>Time: {{thisMeal.time}}</h5>
 	<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
-	<h5>Cook Team: cook team</h5>
+	<!-- <h5>Cook Team: cook team</h5> -->
+	<h5 class="cooks">Cook Team: <span ng-repeat="cook in cooks">{{cook}} </span></h5>
 	<h4>Menu: {{thisMeal.menu}}</h4>
 	<h4>Veggie Option: {{thisMeal.veggie}}</h4>
 	<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
@@ -29,7 +30,7 @@
 	    <tbody>
 	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
 	        
-	        	<td><a href="#!/meal/edit/:{{meal.mealId}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign Up</button></a></td>
+	        	<td><a href="#!/meal/edit/:{{meal.mealId}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
 
 		        <!-- show guest name here -->
 		        <td>{{signUp.name}}</a></td>

@@ -21,7 +21,6 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	            		});
 	            	});
 	          	}
-// console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz);
 	          	resolve(signUpz);
 	      	})
 	      	.catch((error) => {

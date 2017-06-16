@@ -1,9 +1,9 @@
 app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope, FIREBASE_CONFIG, SchedulingFactory, UserFactory, CookTeamFactory) {
 
 	$scope.members = [];
+	$scope.selectedMembers = []; // checked for Cook Team
 	$scope.meals = [];
 	$scope.newMeal ={};
-	$scope.selectedMembers = [];
 
 	$scope.addNewMeal = () => {
 		// calling getuser() better than using $rootScope ...

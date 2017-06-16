@@ -7,7 +7,7 @@ app.controller("EditUserCtrl", function($location, $rootScope, $routeParams, $sc
 			if (userInfo) {
 			  $scope.userUpdate.email = userInfo.email;
 			  $scope.userUpdate.username = userInfo.username;
-			  // $scope.userUpdate.profilePicURL = userInfo.profilePicURL;
+			  $scope.userUpdate.profilePicURL = userInfo.profilePicURL;
 			} else {
 			  // No user is signed in.
 			}
@@ -23,8 +23,10 @@ app.controller("EditUserCtrl", function($location, $rootScope, $routeParams, $sc
     
     $scope.updateUser = () => {
     	UserFactory.editEmail($scope.userUpdate.email);
-		UserFactory.editUser($rootScope.user, $scope.userUpdate).then((results) => {
-		}).catch((error) => {
+		UserFactory.editUser($rootScope.user, $scope.userUpdate)
+		.then((results) => {
+		})
+		.catch((error) => {
 			console.log("update user error: ", error);
 		});
     };

@@ -22,14 +22,10 @@ app.factory("SchedulingFactory", function($http, $q, FIREBASE_CONFIG) {
 
 
  	let getSingleMeal = (id) => {
-// console.log("SchedulingFactory.getSingleMeal // id :: ", id);
 	    return $q((resolve, reject) => {
 	    	$http.get(`${FIREBASE_CONFIG.databaseURL}/meals/${id}.json`)
 		    .then((resultz) => {
-// console.log("SchedulingFactory.getSingleMeal // returned resultz // shd have name :: ", resultz);
-// console.log("SchedulingFactory.getSingleMeal // resultz.data :: ", resultz.data);
 		        resultz.data.id = id;
-// console.log("SchedulingFactory.getSingleMeal // resultz.data.id :: ", resultz.data.id);
 		        resolve(resultz);
 		    })
 		    .catch((error) => {
@@ -43,9 +39,6 @@ app.factory("SchedulingFactory", function($http, $q, FIREBASE_CONFIG) {
 		return $q((resolve, reject) => {
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/meals.json`, JSON.stringify(newMeal))
 			.then((resultz) => {
-// console.log("postNewMeal resultz :: ", resultz);
-// console.log("postNewMeal resultz.data :: ", resultz.data);
-// console.log("postNewMeal resultz.key :: ", resultz.key);
 				resolve(resultz);
 			})
 			.catch((error) => {

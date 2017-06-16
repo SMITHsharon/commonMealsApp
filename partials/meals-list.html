@@ -39,6 +39,7 @@
     <thead class="thead-default">
       <tr>
         <th>Sign Up</th>
+        <th></th>
         <th>Meal Date</th>
         <th>Time</th>
         <th>Cook Team</th>
@@ -49,7 +50,9 @@
       
       <tr ng-repeat="meal in meals | isAfter:date | filter:{signedUp:true}">
         
-        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default btn-xs signUp">Edit Sign Up</button></a></td>
+        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
+        
+        <td><button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button></td>
 
         <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
         <!-- change seed file and use this if implement timepicker in ADD function -->
