@@ -13,6 +13,8 @@ console.log("postedMeal :: ", postedMeal);
 console.log("postedMeal.id :: ", postedMeal.id);
 
 console.log("$scope.newMeal.id :: ", $scope.newMeal.id);
+			resolve(postedMeal);
+console.log("resolved: postedMeal :: ", postedMeal);
 
 			$scope.newMeal = {};
 			$location.url("/meals/list");

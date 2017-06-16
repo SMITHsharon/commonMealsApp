@@ -22,7 +22,7 @@ app.factory("SchedulingFactory", function($http, $q, FIREBASE_CONFIG) {
 
 
  	let getSingleMeal = (id) => {
-console.log("SchedulingFactory.getSingleMeal // id :: ", id);
+// console.log("SchedulingFactory.getSingleMeal // id :: ", id);
 	    return $q((resolve, reject) => {
 	    	$http.get(`${FIREBASE_CONFIG.databaseURL}/meals/${id}.json`)
 		    .then((resultz) => {

@@ -1,6 +1,6 @@
 app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
-	let getSignUpList = (mealId) => {
+	let getSignUpzList = (mealId) => {
 	    let signUpz = [];
 	    return $q((resolve, reject) => {
 	      	$http.get(`${FIREBASE_CONFIG.databaseURL}/signUps.json?orderBy="mealId"`)
@@ -56,7 +56,7 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
 
  	return {
- 		getSignUpList:getSignUpList,
+ 		getSignUpzList:getSignUpzList,
  		getUserSignUpz:getUserSignUpz
  	};
 });
