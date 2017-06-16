@@ -41,23 +41,38 @@ console.log("results.data", results.data);
 
 
 // delete Meal :: also delete Cook Team members + delete Meal Sign-Ups
-	let deleteCookTeam = (mealId) => {
-		console.log("in deleteCookTeam");
-	};
+	// let deleteCookTeam = (mealId) => {
+	// 	console.log("in deleteCookTeam");
+	// };
 
 
-	let deleteSignUps = (mealId) => {
+	// let deleteSignUps = (mealId) => {
 		// console.log("in deleteSignUps");
-		$scope.signUps = getSignUpList(mealId);
-		console.log("in deleteSignUps / $scope.signUps :: ", $scope.signUps);
-	};
+	// 	$scope.signUps = getSignUpList(mealId);
+	// 	console.log("in deleteSignUps / $scope.signUps :: ", $scope.signUps);
+	// };
 
 
 	$scope.deleteMeal = (mealId) => {
 
-		deleteCookTeam(mealId);
-		deleteSignUps(mealId);
+		// deleteCookTeam(mealId);
 
+console.log("$scope.signUps to loop through for delete:: ", $scope.signUps);
+		for (let i=0; i<$scope.signUps.length; i++) {
+			// if ($scope.signUp !== null ) {
+				if (mealId === $scope.signUps[i].mealId) {
+console.log("$scope.signUps[i].id :: ", $scope.signUps[i].id);
+					SignUpFactory.deletzSignUp($scope.signUps[i].id)
+					.then(() => {
+
+					})
+					.catch((error) => {
+						console.log("error on deletzSignUp", error);
+					});
+				}
+			// }
+		}
+		
 		// delete Meal
 		SchedulingFactory.deletzMeal(mealId).then(() => {
 console.log("returned from deletzMeal");

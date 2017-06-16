@@ -2,22 +2,29 @@ app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope,
 
 	$scope.members = [];
 	$scope.meals = [];
+	$scope.newMeal ={};
+	$scope.selectedMembers = [];
 
 	$scope.addNewMeal = () => {
 		// calling getuser() better than using $rootScope ...
 		$scope.newMeal.uid = $rootScope.user.uid;
 		SchedulingFactory.postNewMeal($scope.newMeal)
+		// .then((postedMeal) => {
 		.then((postedMeal) => {
 			// add Cook Team here; need the postedMeal id ???
-console.log("postedMeal :: ", postedMeal);
-console.log("postedMeal.id :: ", postedMeal.id);
+// console.log("postedMeal :: ", postedMeal);
+			let mealId = postedMeal.data.name;
+			$scope.selectedMembers.forEach((thisMember) => {
+				CookTeamFactory.assignCook(mealId, thisMember)
+				.then((resolve) => {
+console.log("assignCook post / resolve :: ", resolve);
+					$location.url("/meals/list");
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			});
 
-console.log("$scope.newMeal.id :: ", $scope.newMeal.id);
-			resolve(postedMeal);
-console.log("resolved: postedMeal :: ", postedMeal);
-
-			$scope.newMeal = {};
-			$location.url("/meals/list");
 		})
 		.catch((error) => {
 			console.log("error on addNewMeal", error);
@@ -37,5 +44,22 @@ console.log("$scope.members :: ", $scope.members);
 		});
 	};
 	getMembers();
+
+
+	$scope.toggleSelection = function toggleSelection(memberId) {
+	    var idx = $scope.selectedMembers.indexOf(memberId);
+
+	    // Is currently selected
+	    if (idx > -1) {
+	      $scope.selectedMembers.splice(idx, 1);
+	    }
+
+	    // Is newly selected
+	    else {
+	      $scope.selectedMembers.push(memberId);
+	    }
+	  };
+	// }]);
+
 
 });

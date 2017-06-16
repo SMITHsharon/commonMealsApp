@@ -44,7 +44,7 @@
         <h4>Cook Team</h4>
         <div class="checkbox-inline" ng-repeat="member in members">
         <!-- Multi-Select Drop Down for Cook Team -->
-            <label class="checkbox-inline"><input type="checkbox" value="">{{member.username}}</label>
+            <label class="checkbox-inline"><input type="checkbox" name="selectedMembers[]" value={{member.uid}} ng-checked="selection.indexOf(member.uid) > -1" ng-click="toggleSelection(member.uid)">{{member.username}}</label>
         </div>
 
         <div>

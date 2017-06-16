@@ -61,7 +61,9 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 		.then((signUpz) => {
 			signUpz.forEach((signUp) => {
 				$scope.signUps.push(signUp);
+
 			});	
+			console.log($scope.signUps);
 		})
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);

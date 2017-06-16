@@ -46,8 +46,29 @@ app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG)
 	    });
  	};
 
+
+ 	let assignCook = (mealId, memberId) => {
+	    return $q((resolve, reject) => {
+// console.log("consoling auth", authData);
+	      $http.post(`${FIREBASE_CONFIG.databaseURL}/cookTeams.json`, 
+	        JSON.stringify({ 
+	          memberId: memberId,
+	          mealId: mealId
+	        })
+	      )
+	      .then((postCookSuccess) => {
+	        resolve(postCookSuccess);
+	      })
+	      .catch((postCookError) => {
+	        reject(postCookError);
+	      });
+	    });
+ 	};
+
+
  	return {
- 		getCookTeam:getCookTeam
+ 		getCookTeam:getCookTeam,
+ 		assignCook:assignCook
  	};
 
 });

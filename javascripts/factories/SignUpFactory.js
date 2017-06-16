@@ -54,9 +54,23 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
  	};
 
 
+ 	let deletzSignUp = (id) => {
+ console.log("in deletzSignUp / id ", id);
+    return $q((resolve, reject) => {
+    	$http.delete(`${FIREBASE_CONFIG.databaseURL}/signUps/${id}.json"`)
+    		.then((resultz) => {
+    			resolve(resultz);
+    		})
+    		.catch((error) => {
+    			reject(error);
+    		});
+  		});
+	};
+
 
  	return {
  		getSignUpzList:getSignUpzList,
- 		getUserSignUpz:getUserSignUpz
+ 		getUserSignUpz:getUserSignUpz,
+ 		deletzSignUp:deletzSignUp
  	};
 });
