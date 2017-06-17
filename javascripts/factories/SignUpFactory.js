@@ -53,6 +53,68 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
  	};
 
 
+ 	let getSingleSignUp = (uid, mealId) => {
+		return $q((resolve, reject) => {
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/signUps/${uid}.json?orderBy="uid"&equalTo="${mealId}"`)
+			.then((resultz) => {
+				resultz.data.id = id;
+				resolve(resultz);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+		});
+	};
+
+
+ 	let postNewSignUp = (newSignUp) => {
+		return $q((resolve, reject) => {
+			$http.post(`${FIREBASE_CONFIG.databaseURL}/signUps.json`, JSON.stringify(newSignUp))
+			// $http.post(`${FIREBASE_CONFIG.databaseURL}/signUps.json`, 
+			// 	JSON.stringify({ 
+		 //          adults: newSignUp.adults,
+		 //          children: newSignUp.children,
+		 //          regularMeal: newSignUp.regularMeal,
+		 //          veggie: newSignUp.veggie,
+		 //          comments: newSignUp.comments,
+		 //          memberId: newSignUp.uid,
+		 //          mealId: mealId
+		 //        })
+		 //    )
+			.then((resultz) => {
+console.log("newSignUp resultz :: ", resultz);
+				resolve(resultz);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+		});
+	};
+
+
+	let editSignUp = (board) => {
+		return $q((resolve, reject) => {
+			$http.put(`${FIREBASE_CONFIG.databaseURL}/boards/${signUp.id}.json`, JSON.stringify({
+		        adults: newSignUp.adults,
+		        children: newSignUp.children,
+		        regularMeal: newSignUp.regularMeal,
+		        veggie: newSignUp.veggie,
+		        comments: newSignUp.comments,
+		        memberId: newSignUp.uid,
+		        mealId: newSignUp.mealId
+		      }))
+			.then((resultz) => {
+console.log("SignUpFactory.editSignUp resultz :: ", resultz);
+				resolve(resultz);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+		});
+	};
+
+
+
  	let deletzSignUp = (id) => {
  console.log("in deletzSignUp / id ", id);
     return $q((resolve, reject) => {
@@ -70,6 +132,9 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
  	return {
  		getSignUpzList:getSignUpzList,
  		getUserSignUpz:getUserSignUpz,
+ 		getSingleSignUp:getSingleSignUp,
+ 		postNewSignUp:postNewSignUp,
+ 		editSignUp:editSignUp,
  		deletzSignUp:deletzSignUp
  	};
 });
