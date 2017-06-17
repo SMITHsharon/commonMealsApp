@@ -9,8 +9,9 @@
 	<h4>Veggie Option: {{thisMeal.veggie}}</h4>
 	<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
 	<h5>Actual Cost: tbd</h5>
-							
-	<button type="button" class="btn btn-primary btn-xs editMeal" ng-click="editMeal(meal.id)">Edit Meal</button>
+	
+				
+	<a href="#!/meal/edit/{{thisMeal.id}}"><button type="button" class="btn btn-primary btn-xs editMeal" ng-click="editMeal(meal.id)">Edit Meal</button></a>
 
     <button type="button" class="btn btn-warning btn-xs deleteMeal" ng-click="deleteMeal(thisMeal.id)">Delete Meal</button>
 
@@ -30,7 +31,7 @@
 	    <tbody>
 	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
 	        
-	        	<td><a href="#!/meal/edit/:{{meal.mealId}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
+	        	<td><a href="#!/meal/edit/{{meal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
 
 		        <!-- show guest name here -->
 		        <td>{{signUp.name}}</a></td>
@@ -45,6 +46,9 @@
 	</table>
 
 	<!-- if user is on cook team ... add buttons for Edit Meal, Delete Meal -->
-	<a href="#!/meal/signup/:{{thisMeal.mealId}}"><button class="btn btn-primary btn-xs signUp">Sign Up</button></a>
-	<!-- if user is signed-up ... add button to Delete Sign-Up -->
+	<div ng-show="$rootScope.user.uid === signUp.memberId">
+		<a href="#!/meal/signup/{{thisMeal.mealId}}"><button class="btn btn-primary btn-xs signUp">Sign Up</button></a>
+		<!-- if user is signed-up ... add button to Delete Sign-Up -->
+	</div>
 </div>
+

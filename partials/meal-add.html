@@ -1,57 +1,79 @@
 <div class="container">
+    <div class="row newBoardForm">
+        <div class="col-xs-4 col-xs-offset-2">
 
-    <h4>New Meal / Specs</h4>
-    <form>
-        <div class="form-group">
-            <label>Meal Date</label>
-            <input type="date" class="form-control" uib-datepicker-popup ng-model="newMeal.mealDate" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+            <h4>New Meal / Specs</h4>
+            <div ng-hide="currentPath === '/meal/add'">
+            <!-- <div ng-if="currentPath === 'meal/edit/:id'"> -->
+                <h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
+                <h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
+                <!-- <h5>Cook Team: cook team</h5> -->
+                <h5 class="cooks">Cook Team: <span ng-repeat="cook in cooks">{{cook}} </span></h5>
+            </div>
+
+            <form>
+                <div class="form-group">
+                <!-- <div class="form-group" ng-show="currentPath === '/meal/add'"> -->
+                    <label>Meal Date</label>
+                    <input type="date" class="form-control" uib-datepicker-popup ng-model="newMeal.mealDate" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
     
 <!-- <input type="text" class="form-control" placeholder="Meal Date"ng-model="newMeal.task"/> -->
-        </div>
+                </div>
 
-        <div>
-            <label>Time</label>
-            <input type="text" class="form-control" uib-timepicker ng-model="newMeal.time" ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"/>
-            <!-- <input type="text" class="form-control" placeholder="Time" ng-model="newMeal.time"/> -->
-        </div>
+                <div>
+                    <label>Time</label>
+                    <!-- <input type="text" class="form-control" uib-timepicker ng-model="newMeal.time" ng-model="mytime" ng-change="changed()" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"/> -->
+                    <input type="text" class="form-control" placeholder="Time" ng-model="newMeal.time"/>
+                </div>
 
-        <div >
-            <label>Deadline</label>
-            <input type="date" class="form-control" uib-datepicker-popup ng-model="newMeal.deadline" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-<!-- {{mytime | date:'shortTime' }} -->
-        </div>
-            <!-- <span class="input-group-btn"> -->
-        <div>
-            <label>Menu</label>
-                <input type="text" class="form-control" placeholder="Menu" ng-model="newMeal.menu"/>
-        </div>
+                <div>
+                <!-- <div ng-show="currentPath === '/meal/add'"> -->
+                    <label>Deadline</label>
+                    <input type="date" class="form-control" uib-datepicker-popup ng-model="newMeal.deadline" is-open="isOpened2" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+        <!-- {{mytime | date:'shortTime' }} -->
+                </div>
+                    <!-- <span class="input-group-btn"> -->
+                <div>
+                    <label>Menu</label>
+                        <input type="text" class="form-control" placeholder="Menu" ng-model="newMeal.menu"/>
+                </div>
 
-        <div>
-            <label>Veggie Option</label>
-                <input type="text" class="form-control" placeholder="Veggie Option" ng-model="newMeal.veggie"/>
-        </div>
+                <div>
+                    <label>Veggie Option</label>
+                        <input type="text" class="form-control" placeholder="Veggie Option" ng-model="newMeal.veggie"/>
+                </div>
 
-        <div>
-            <label>Estimated Cost</label>
-                <input type="text" class="form-control" placeholder="Estimated Cost" ng-model="newMeal.estCost"/>
-        </div>
+                <div>
+                    <label>Estimated Cost</label>
+                        <input type="text" class="form-control" placeholder="Estimated Cost" ng-model="newMeal.estCost"/>
+                </div>
 
-        <div>
-            <label>Comments</label>
-                <input type="text" class="form-control" placeholder="Comments" ng-model="newMeal.comments"/>
-        </div>
+                <div>
+                    <label>Comments</label>
+                        <input type="text" class="form-control" placeholder="Comments" ng-model="newMeal.comments"/>
+                </div>
 
-        <h4>Cook Team</h4>
-        <div class="checkbox-inline" ng-repeat="member in members">
-        <!-- Multi-Select Drop Down for Cook Team -->
-            <label class="checkbox-inline"><input type="checkbox" name="selectedMembers[]" value={{member.uid}} ng-checked="selection.indexOf(member.uid) > -1" ng-click="toggleSelection(member.uid)">{{member.username}}</label>
-        </div>
+                <h4>Cook Team</h4>
+                <div class="checkbox-inline" ng-repeat="member in members">
+                <!-- Multi-Select Drop Down for Cook Team -->
+                    <label class="checkbox-inline"><input type="checkbox" name="selectedMembers[]" value={{member.uid}} ng-checked="selection.indexOf(member.uid) > -1" ng-click="toggleSelection(member.uid)">{{member.username}}</label>
+                </div>
 
-        <div>
-            <button class="btn btn-primary btn-sm" ng-click="addNewMeal()">Add Meal</button>
+                <div class="addMealButtons" ng-hide="currentPath !== '/meal/add'">  
+                <!-- <div class="addMealButtons" ng-if="currentPath === '/meal/add'">   -->
+                    <button class="btn btn-primary btn-sm" ng-click="addNewMeal()">Add Meal</button>
 
-            <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
-        </div>
+                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
+                </div>
 
-    </form>
-</div>
+                <div class="editMealButtons" ng-hide="currentPath == '/meal/add'">
+                <!-- <div class="editMealButtons" ng-if="currentPath === 'meal/edit/:id'">   -->
+                    <button class="btn btn-primary btn-sm" ng-click="addNewMeal()">Update Meal</button>
+
+                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
+                </div>
+
+            </form>
+        </div> <!-- .col -->
+    </div> <!-- .row -->
+</div> <!-- .container -->

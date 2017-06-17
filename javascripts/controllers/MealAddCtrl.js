@@ -1,9 +1,10 @@
 app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope, FIREBASE_CONFIG, SchedulingFactory, UserFactory, CookTeamFactory) {
 
 	$scope.members = [];
-	$scope.selectedMembers = []; // checked for Cook Team
+	$scope.selectedMembers = []; // checked=true for Cook Team
 	$scope.meals = [];
 	$scope.newMeal ={};
+	$scope.currentPath = $location.path();
 
 	$scope.addNewMeal = () => {
 		// calling getuser() better than using $rootScope ...
@@ -24,7 +25,6 @@ console.log("assignCook post / resolve :: ", resolve);
 					console.log(error);
 				});
 			});
-
 		})
 		.catch((error) => {
 			console.log("error on addNewMeal", error);
