@@ -2,7 +2,6 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 
 	let addUser = (authData) => {
 	    return $q((resolve, reject) => {
-// console.log("consoling auth", authData);
 	      $http.post(`${FIREBASE_CONFIG.databaseURL}/users.json`, 
 	        JSON.stringify({ 
 	          uid: authData.uid,
@@ -60,6 +59,27 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	};
 
 
+	let getMemberList = () => {
+		let memberz = [];
+		return $q((resolve, reject) => {
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/users.json?orderBy="uid"`)
+			.then((fbusers) => {
+				let userCollection = fbusers.data;
+				if (userCollection !== null) {
+					Object.keys(userCollection).forEach((key) => {
+						userCollection[key].id = key;
+						memberz.push(userCollection[key]);
+					});
+				}
+				resolve(memberz);
+			})
+			.catch((error) => {
+				reject(error);
+			});
+		});
+	};
+
+
   	let editEmail = (newEmail) => {
 	    var user = firebase.auth().currentUser;
 	      user.updateEmail(newEmail).then(function() {
@@ -91,6 +111,7 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 		addUser:addUser, 
 		getUser:getUser, 
 		getThisMemberName:getThisMemberName,
+		getMemberList:getMemberList,
 		editUser:editUser, 
 		editEmail:editEmail
 	};

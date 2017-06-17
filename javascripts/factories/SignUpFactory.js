@@ -1,6 +1,6 @@
 app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
-	let getSignUpList = (mealId) => {
+	let getSignUpzList = (mealId) => {
 	    let signUpz = [];
 	    return $q((resolve, reject) => {
 	      	$http.get(`${FIREBASE_CONFIG.databaseURL}/signUps.json?orderBy="mealId"`)
@@ -14,14 +14,13 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	            	signUpz.forEach((signUp) => {
 	            		UserFactory.getThisMemberName(signUp.memberId)
 	            		.then((thizName) => {
-	            			signUp["name"] = thizName;
+	            			signUp.name = thizName;
 	            		})
 	            		.catch((error) => {
 	            			reject(error);
 	            		});
 	            	});
 	          	}
-console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz);
 	          	resolve(signUpz);
 	      	})
 	      	.catch((error) => {
@@ -54,9 +53,23 @@ console.log("SignUpFactory.getSignUpList // signUpz // pushed name :: ", signUpz
  	};
 
 
+ 	let deletzSignUp = (id) => {
+ console.log("in deletzSignUp / id ", id);
+    return $q((resolve, reject) => {
+    	$http.delete(`${FIREBASE_CONFIG.databaseURL}/signUps/${id}.json"`)
+    		.then((resultz) => {
+    			resolve(resultz);
+    		})
+    		.catch((error) => {
+    			reject(error);
+    		});
+  		});
+	};
+
 
  	return {
- 		getSignUpList:getSignUpList,
- 		getUserSignUpz:getUserSignUpz
+ 		getSignUpzList:getSignUpzList,
+ 		getUserSignUpz:getUserSignUpz,
+ 		deletzSignUp:deletzSignUp
  	};
 });

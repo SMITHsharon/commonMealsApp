@@ -31,14 +31,15 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 				$scope.meals[i].signedUp = false;
 
-				// getCooks($scope.meals[i].id);
+
+				// get Cook Team for each Meal
 				CookTeamFactory.getCookTeam($scope.meals[i].id)
 				.then((cookNamez) => {
 					$scope.meals[i].cookNames = cookNamez;
 
 
+					// get if current user is signed up for this meal 
 					for (let j=0; j<$scope.signUps.length; j++) {
-
 						if ($scope.meals[i].id === $scope.signUps[j].mealId) {
 							$scope.meals[i].signedUp = true;
 						}
@@ -62,10 +63,25 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 			signUpz.forEach((signUp) => {
 				$scope.signUps.push(signUp);
 			});	
+			console.log($scope.signUps);
 		})
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);
 		});
+	};
+
+
+	let deleteSignUp = (mealId) => {
+console.log("in deleteSignUp");
+		let userSignUps = getUserSignUps($scope.thisUser.userId);
+console.log("mealId // userSignUps :: ", mealId, userSignUps);
+		for (let i=0; i<userSignUps.length; i++) {
+			if (userSignUps[i].mealId === mealId) {
+console.log("userSignUps[i].mealId; mealId; i ::", i, userSignUps[i].mealId, mealId);
+				SignUpFactory.deletzSignUp(mealId);
+			}
+			$location.url("/meals/list");
+		}
 	};
 
 
