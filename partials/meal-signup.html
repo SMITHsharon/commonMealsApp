@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row newSignUpForm">
+        <div class="col-xs-6 col-xs-6">
+        <!-- <div class="col-xs-4 col-xs-offset-1"> -->
+
+	        <h4>What's for Dinner?</h4>
+			<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
+			<h5>Time: {{thisMeal.time}}</h5>
+			<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
+			<!-- <h5>Cook Team: cook team</h5> -->
+			<h5 class="cooks">Cook Team: <span ng-repeat="cook in cooks">{{cook}} </span></h5>
+			<h5>Menu: {{thisMeal.menu}}</h5>
+			<h5>Veggie Option: {{thisMeal.veggie}}</h5>
+			<h5>Comments: {{thisMeal.comments}}</h5>
+			<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
+        </div> <!-- .col -->
+
+        <div>
+        	<h4>Sign-Up Information</h4>
+<!-- sign-up input fields here -->
+        </div> <!-- .col -->
+    </div> <!-- .row -->
+
+			<!-- <h4>Sign-Up Information</h4> -->
+<!-- sign-up input fields here -->
+
+			<h4>Guest List</h4>
+			<table class="table">
+			    <thead class="thead-default">
+					<tr>
+				       <th></th>
+				       <th></th>
+				       <th># Adults</th>
+				       <th># Children</th>
+				       <th>Regular Meal</th>
+				       <th>Veggie</th>
+					</tr>
+			    </thead>
+			    <tbody>
+			    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
+			        
+			        	<td ng-show="user.uid === signUp.memberId"><a href="#!/meal/edit/{{meal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
+
+				        <!-- show guest name here -->
+				        <td>{{signUp.name}}</a></td>
+				        <td>{{signUp.adults}}</td>
+				        <td>{{signUp.children}}</td>
+				        <td ng-show="signUp.regularMeal">yes</td>
+				        <td ng-show="!signUp.regularMeal">no</td>
+				        <td ng-show="signUp.veggie">yes</td>
+				        <td ng-show="!signUp.veggie">no</td>
+			      	</tr>
+			    </tbody>
+			</table>
+
+
+
+</div> <!-- .container -->

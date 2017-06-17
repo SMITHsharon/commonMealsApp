@@ -11,7 +11,6 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 	  		// getCooks($scope.meals[i].id);
 			CookTeamFactory.getCookTeam($routeParams.id)
 			.then((cookNamez) => {
-// console.log("cookNamez for this meal :: ", cookNamez);
 				$scope.cooks = cookNamez;
 
 				getSignUpList($routeParams.id);

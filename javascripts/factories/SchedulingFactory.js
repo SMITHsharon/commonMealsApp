@@ -53,7 +53,7 @@ app.factory("SchedulingFactory", function($http, $q, FIREBASE_CONFIG) {
 		return $q((resolve, reject) => {
 			$http.put(`${FIREBASE_CONFIG.databaseURL}/meals/${meal.id}.json`, JSON.stringify({
 		        mealDate: meal.mealDate,
-		        deadline: meal.dealine,
+		        deadline: meal.deadline,
 		        time: meal.time,
 		        menu: meal.menu,
 		        veggie: meal.veggie,
