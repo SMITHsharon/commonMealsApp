@@ -58,14 +58,12 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 		return $q((resolve, reject) => {
 			$http.get(`${FIREBASE_CONFIG.databaseURL}/signUps/.json?orderBy="memberId"&equalTo="${uid}"`)
 			.then((signUpz) => {
-console.log("SignUpFactory / getSingleSignUp / signUpz :: ", signUpz);
 				let signUpCollection = signUpz.data;
 				Object.keys(signUpCollection).forEach((key) => {
 					if (signUpCollection[key].mealId === mealId) {
 						signUpCollection[key].id = key;
 						thisZignUp.push(signUpCollection[key])
 					}
-console.log("thisZignUp :: ", thisZignUp);
 				resolve(thisZignUp[0]);
 				})
 				
@@ -80,19 +78,7 @@ console.log("thisZignUp :: ", thisZignUp);
  	let postNewSignUp = (newSignUp) => {
 		return $q((resolve, reject) => {
 			$http.post(`${FIREBASE_CONFIG.databaseURL}/signUps.json`, JSON.stringify(newSignUp))
-			// $http.post(`${FIREBASE_CONFIG.databaseURL}/signUps.json`, 
-			// 	JSON.stringify({ 
-		 //          adults: newSignUp.adults,
-		 //          children: newSignUp.children,
-		 //          regularMeal: newSignUp.regularMeal,
-		 //          veggie: newSignUp.veggie,
-		 //          comments: newSignUp.comments,
-		 //          memberId: newSignUp.uid,
-		 //          mealId: mealId
-		 //        })
-		 //    )
 			.then((resultz) => {
-console.log("newSignUp resultz :: ", resultz);
 				resolve(resultz);
 			})
 			.catch((error) => {
@@ -114,7 +100,6 @@ console.log("newSignUp resultz :: ", resultz);
 		        mealId: signUp.mealId
 		      }))
 			.then((resultz) => {
-console.log("SignUpFactory.editSignUp resultz :: ", resultz);
 				resolve(resultz);
 			})
 			.catch((error) => {
@@ -122,7 +107,6 @@ console.log("SignUpFactory.editSignUp resultz :: ", resultz);
 			});
 		});
 	};
-
 
 
  	let deletzSignUp = (id) => {
