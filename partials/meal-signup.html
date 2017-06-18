@@ -50,11 +50,19 @@
 	                        <input type="text" class="form-control" placeholder="Comments" ng-model="newSignUp.comments"/>
 	                </div>
 
-	                <div class="addSignUpButtons">  
+<!-- why are these ng-hides not working ??? -->
+	                <!-- <div class="addSignUpButtons" ng-hide="currentPath !== '/meal/signup/{{newSignUp.mealId}}'">   -->
 	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Add Sign-Up</button>
 
 	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
-                	</div>
+                	<!-- </div> -->
+
+                	<!-- <div class="editSignUpButtons" ng-hide="currentPath !== '/meal/signup/edit/{{newSignUp.mealId}}'">  
+	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Edit Sign-Up</button>
+
+	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
+                	</div> -->
+
                 </div> <!-- .form-group -->
             </form> <!-- form -->
         </div> <!-- .col -->
@@ -78,7 +86,9 @@
 	    <tbody>
 	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
 	        
-	        	<td ng-show="user.uid === signUp.memberId"><a href="#!/meal/edit/{{meal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
+	        	<!-- <div class="addEditSignUpButton" ng-hide="currentPath !== '/meal/add'">   -->
+	        		<td ng-show="user.uid === signUp.memberId"><a href="#!/meal/edit/{{meal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
+	        	<!-- </div> -->
 
 		        <!-- show guest name here -->
 		        <td>{{signUp.name}}</a></td>

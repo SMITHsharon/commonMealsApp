@@ -54,11 +54,21 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
 
  	let getSingleSignUp = (uid, mealId) => {
+ 		let thisZignUp = [];
 		return $q((resolve, reject) => {
-			$http.get(`${FIREBASE_CONFIG.databaseURL}/signUps/${uid}.json?orderBy="uid"&equalTo="${mealId}"`)
-			.then((resultz) => {
-				resultz.data.id = id;
-				resolve(resultz);
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/signUps/.json?orderBy="memberId"&equalTo="${uid}"`)
+			.then((signUpz) => {
+console.log("SignUpFactory / getSingleSignUp / signUpz :: ", signUpz);
+				let signUpCollection = signUpz.data;
+				Object.keys(signUpCollection).forEach((key) => {
+					if (signUpCollection[key].mealId === mealId) {
+						signUpCollection[key].id = key;
+						thisZignUp.push(signUpCollection[key])
+					}
+console.log("thisZignUp :: ", thisZignUp);
+				resolve(thisZignUp[0]);
+				})
+				
 			})
 			.catch((error) => {
 				reject(error);

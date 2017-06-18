@@ -4,16 +4,18 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 	$scope.cooks = [];
 	$scope.signUps = [];
 
+	let mealId = $routeParams.id;
 
-	SchedulingFactory.getSingleMeal($routeParams.id)
+
+	SchedulingFactory.getSingleMeal(mealId)
 		.then((results) => {
 	  		$scope.thisMeal = results.data;
 	  		// getCooks($scope.meals[i].id);
-			CookTeamFactory.getCookTeam($routeParams.id)
+			CookTeamFactory.getCookTeam(mealId)
 			.then((cookNamez) => {
 				$scope.cooks = cookNamez;
 
-				getSignUpList($routeParams.id);
+				getSignUpList(mealId);
 			});
 		 })
 		 .catch((error) => {
@@ -32,9 +34,19 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 			 	console.log("error on getSignUpList", error);
 			});
 	};
+
+
+	$scope.thisUserSignedUp = () => {
+console.log("$rootScope.user.uid, $scope.signUps.memberId :: ", $rootScope.user.uid, $scope.signUps.memberId);
+		for (let i=0; i<$scope.signUps.length; i++) {
+			if ($rootScope.user.uid === $scope.signUps.memberId) {
+				return true;
+			} 
+		}
+		// current user is not signed up 
+		return false;
+	};
 	
-
-
 
 	$scope.deleteMeal = (mealId) => {
 

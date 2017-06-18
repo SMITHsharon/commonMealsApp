@@ -5,10 +5,14 @@ console.log("in MealSignUpEditCtrl");
 	$scope.thisMeal = {};
 	$scope.cooks = [];
 	$scope.signUps = [];
-	$scope.newSignUp = {};
+	$scope.newSignUp = [];
+
+	$scope.currentPath = $location.path();
+console.log("$location.path() :: ", $location.path());
 
 console.log("$routeParams.id in MealSignUpEditCtrl :: ", $routeParams.id);
 	let mealId = $routeParams.id;
+console.log("mealId in MealSignUpEditCtrl :: ", mealId);
 
 	SchedulingFactory.getSingleMeal(mealId)
 		.then((results) => {
@@ -41,8 +45,11 @@ console.log("results upon return, getSingleMeal :: ", results);
 
 
 	SignUpFactory.getSingleSignUp($rootScope.user.uid, mealId)
-	.then((results) => {
-		$scope.newSignUp = results.data;
+	.then((singleZignUp) => {
+console.log("singleZignUp return :: ", singleZignUp);
+		$scope.newSignUp = singleZignUp;
+		// $scope.newSignUp = singleZignUp.data;
+console.log("getSingleSignUp :: $scope.newSignUp :: ", $scope.newSignUp);
 	})
 	.catch((error) => {
 		console.log("error on getSingleSignUp", error);
