@@ -102,16 +102,16 @@ console.log("newSignUp resultz :: ", resultz);
 	};
 
 
-	let editSignUp = (board) => {
+	let editSignUp = (signUp) => {
 		return $q((resolve, reject) => {
-			$http.put(`${FIREBASE_CONFIG.databaseURL}/boards/${signUp.id}.json`, JSON.stringify({
-		        adults: newSignUp.adults,
-		        children: newSignUp.children,
-		        regularMeal: newSignUp.regularMeal,
-		        veggie: newSignUp.veggie,
-		        comments: newSignUp.comments,
-		        memberId: newSignUp.uid,
-		        mealId: newSignUp.mealId
+			$http.put(`${FIREBASE_CONFIG.databaseURL}/signUps/${signUp.id}.json`, JSON.stringify({
+		        adults: signUp.adults,
+		        children: signUp.children,
+		        regularMeal: signUp.regularMeal,
+		        veggie: signUp.veggie,
+		        comments: signUp.comments,
+		        memberId: signUp.memberId,
+		        mealId: signUp.mealId
 		      }))
 			.then((resultz) => {
 console.log("SignUpFactory.editSignUp resultz :: ", resultz);
