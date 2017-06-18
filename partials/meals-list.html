@@ -49,9 +49,10 @@
     </thead>
     <tbody>
       
-      <tr ng-repeat="meal in meals | isAfter:date | filter:{signedUp:true}">
+      <!-- <tr ng-repeat="meal in meals | filter:{signedUp:true}"> -->
+      <tr ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date">
         
-        <td><a href="#!/meal/signup/:{{meal.mealId}}"><button class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
+        <td><a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
         
         <td><button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button></td>
 
