@@ -31,12 +31,10 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 				$scope.meals[i].signedUp = false;
 
-
 				// get Cook Team for each Meal
 				CookTeamFactory.getCookTeam($scope.meals[i].id)
 				.then((cookNamez) => {
 					$scope.meals[i].cookNames = cookNamez;
-
 
 					// get if current user is signed up for this meal 
 					for (let j=0; j<$scope.signUps.length; j++) {
@@ -49,7 +47,6 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 					console.log("error on getCookTeam", error);
 				});
 			}
-
 		}).catch((error) => {
 		  console.log("error on getMeals", error);
 		});
@@ -63,7 +60,6 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 			signUpz.forEach((signUp) => {
 				$scope.signUps.push(signUp);
 			});	
-			console.log($scope.signUps);
 		})
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);
@@ -71,16 +67,31 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 	};
 
 
-	let deleteSignUp = (mealId) => {
-console.log("in deleteSignUp");
-		let userSignUps = getUserSignUps($scope.thisUser.userId);
-console.log("mealId // userSignUps :: ", mealId, userSignUps);
-		for (let i=0; i<userSignUps.length; i++) {
-			if (userSignUps[i].mealId === mealId) {
-console.log("userSignUps[i].mealId; mealId; i ::", i, userSignUps[i].mealId, mealId);
-				SignUpFactory.deletzSignUp(mealId);
+	$scope.deleteMeal = (mealId) => {
+	// delete Meal
+		SchedulingFactory.deletzMeal(mealId)
+		.then(() => {
+			$location.url('/meals/list');
+		})
+		.catch((error) => {
+			console.log("error on deleteMeal", error);
+		});
+	};
+
+
+	$scope.deleteSignUp = (mealId) => {
+		let signUpId = -1;
+		for (let i=0; i<$scope.signUps.length; i++) {
+			if ($scope.signUps[i].mealId === mealId) {
+				signUpId = $scope.signUps[i].id;
 			}
-			$location.url("/meals/list");
+			SignUpFactory.deletzSignUp(signUpId)
+			.then(() => {
+				$location.url("/meals/list");
+			})
+			.catch((error) => {
+			console.log("error on deleteSignUp", error);
+			});
 		}
 	};
 

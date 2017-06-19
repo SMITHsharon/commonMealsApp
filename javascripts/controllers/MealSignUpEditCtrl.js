@@ -27,7 +27,6 @@ app.controller("MealSignUpEditCtrl", function($location, $routeParams, $rootScop
 		SignUpFactory.getSignUpzList(mealId)
 			.then((signUpz) => {
 	  			$scope.signUps = signUpz;
-	console.log("before return to deleteSignUps / $scope.signUps :: ", $scope.signUps);
 			})
 			.catch((error) => {
 			 	console.log("error on getSignUpList", error);
