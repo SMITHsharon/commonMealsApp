@@ -62,11 +62,10 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 				Object.keys(signUpCollection).forEach((key) => {
 					if (signUpCollection[key].mealId === mealId) {
 						signUpCollection[key].id = key;
-						thisZignUp.push(signUpCollection[key])
+						thisZignUp.push(signUpCollection[key]);
 					}
 				resolve(thisZignUp[0]);
-				})
-				
+				});
 			})
 			.catch((error) => {
 				reject(error);
@@ -109,10 +108,10 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	};
 
 
- 	let deletzSignUp = (id) => {
- console.log("in deletzSignUp / id ", id);
+ 	let deletzSignUp = (signUpId) => {
+ console.log("in deletzSignUp / signUpId ", signUpId);
     return $q((resolve, reject) => {
-    	$http.delete(`${FIREBASE_CONFIG.databaseURL}/signUps/${id}.json"`)
+    	$http.delete(`${FIREBASE_CONFIG.databaseURL}/signUps/${signUpId}.json`)
     		.then((resultz) => {
     			resolve(resultz);
     		})

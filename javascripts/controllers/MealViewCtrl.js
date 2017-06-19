@@ -10,7 +10,6 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 	SchedulingFactory.getSingleMeal(mealId)
 		.then((results) => {
 	  		$scope.thisMeal = results.data;
-	  		// getCooks($scope.meals[i].id);
 			CookTeamFactory.getCookTeam(mealId)
 			.then((cookNamez) => {
 				$scope.cooks = cookNamez;
@@ -26,7 +25,6 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 	let getSignUpList = (mealId) => {
 		SignUpFactory.getSignUpzList(mealId)
 			.then((signUpz) => {
-	// console.log("signUpz", signUpz);
 	  			$scope.signUps = signUpz;
 	console.log("before return to deleteSignUps / $scope.signUps :: ", $scope.signUps);
 			})
@@ -69,10 +67,12 @@ console.log("$rootScope.user.uid, $scope.signUps.memberId :: ", $rootScope.user.
 		// }
 		
 		// delete Meal
-		SchedulingFactory.deletzMeal(mealId).then(() => {
+		SchedulingFactory.deletzMeal(mealId)
+		.then(() => {
 console.log("returned from deletzMeal");
 			$location.url('/meals/list');
-		}).catch((error) => {
+		})
+		.catch((error) => {
 			console.log("error on deleteMeal", error);
 		});
 	};

@@ -63,7 +63,7 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 			signUpz.forEach((signUp) => {
 				$scope.signUps.push(signUp);
 			});	
-			console.log($scope.signUps);
+console.log("getUserSignUps :: ", $scope.signUps);
 		})
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);
@@ -71,18 +71,40 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 	};
 
 
-	let deleteSignUp = (mealId) => {
+	$scope.deleteMeal = (mealId) => {
+	// delete Meal
+		SchedulingFactory.deletzMeal(mealId)
+		.then(() => {
+console.log("returned from deletzMeal");
+			$location.url('/meals/list');
+		})
+		.catch((error) => {
+			console.log("error on deleteMeal", error);
+		});
+	};
+
+
+	$scope.deleteSignUp = (mealId) => {
 console.log("in deleteSignUp");
-		let userSignUps = getUserSignUps($scope.thisUser.userId);
-console.log("mealId // userSignUps :: ", mealId, userSignUps);
-		for (let i=0; i<userSignUps.length; i++) {
-			if (userSignUps[i].mealId === mealId) {
-console.log("userSignUps[i].mealId; mealId; i ::", i, userSignUps[i].mealId, mealId);
-				SignUpFactory.deletzSignUp(mealId);
+console.log("mealId :: ", mealId);
+console.log("$scope.signUps[0].id, $scope.signUps[0].mealId", $scope.signUps[0].id, $scope.signUps[0].mealId);
+		let signUpId = -1;
+		for (let i=0; i<$scope.signUps.length; i++) {
+			if ($scope.signUps[i].mealId === mealId) {
+				signUpId = $scope.signUps[i].id;
+
+console.log("$scope.signUps[i].id, $scope.signUps[i].mealId, i", i, $scope.signUps[i].id, $scope.signUps[i].mealId);
 			}
-			$location.url("/meals/list");
+			SignUpFactory.deletzSignUp(signUpId)
+			.then(() => {
+				$location.url("/meals/list");
+			})
+			.catch((error) => {
+			console.log("error on deleteSignUp", error);
+			});
 		}
 	};
+
 
 
 	// function provides the conditional based on deadline, 
