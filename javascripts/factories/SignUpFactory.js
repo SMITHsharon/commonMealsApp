@@ -32,7 +32,6 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
 
 	let getUserSignUpz = (userId) => {
-	// let getMealList = (userId) => {
 	    let signUpz = [];
 	    return $q((resolve, reject) => {
 	    	 $http.get(`${FIREBASE_CONFIG.databaseURL}/signUps.json?orderBy="memberId"&equalTo="${userId}"`)
@@ -109,7 +108,6 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
 
  	let deletzSignUp = (signUpId) => {
- console.log("in deletzSignUp / signUpId ", signUpId);
     return $q((resolve, reject) => {
     	$http.delete(`${FIREBASE_CONFIG.databaseURL}/signUps/${signUpId}.json`)
     		.then((resultz) => {

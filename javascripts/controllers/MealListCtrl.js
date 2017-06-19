@@ -31,12 +31,10 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 				$scope.meals[i].signedUp = false;
 
-
 				// get Cook Team for each Meal
 				CookTeamFactory.getCookTeam($scope.meals[i].id)
 				.then((cookNamez) => {
 					$scope.meals[i].cookNames = cookNamez;
-
 
 					// get if current user is signed up for this meal 
 					for (let j=0; j<$scope.signUps.length; j++) {
@@ -49,7 +47,6 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 					console.log("error on getCookTeam", error);
 				});
 			}
-
 		}).catch((error) => {
 		  console.log("error on getMeals", error);
 		});
@@ -63,7 +60,6 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 			signUpz.forEach((signUp) => {
 				$scope.signUps.push(signUp);
 			});	
-console.log("getUserSignUps :: ", $scope.signUps);
 		})
 		.catch((error) => {
 			console.log("error on getUserSignUps", error);
@@ -75,7 +71,6 @@ console.log("getUserSignUps :: ", $scope.signUps);
 	// delete Meal
 		SchedulingFactory.deletzMeal(mealId)
 		.then(() => {
-console.log("returned from deletzMeal");
 			$location.url('/meals/list');
 		})
 		.catch((error) => {
@@ -85,15 +80,10 @@ console.log("returned from deletzMeal");
 
 
 	$scope.deleteSignUp = (mealId) => {
-console.log("in deleteSignUp");
-console.log("mealId :: ", mealId);
-console.log("$scope.signUps[0].id, $scope.signUps[0].mealId", $scope.signUps[0].id, $scope.signUps[0].mealId);
 		let signUpId = -1;
 		for (let i=0; i<$scope.signUps.length; i++) {
 			if ($scope.signUps[i].mealId === mealId) {
 				signUpId = $scope.signUps[i].id;
-
-console.log("$scope.signUps[i].id, $scope.signUps[i].mealId, i", i, $scope.signUps[i].id, $scope.signUps[i].mealId);
 			}
 			SignUpFactory.deletzSignUp(signUpId)
 			.then(() => {
@@ -104,7 +94,6 @@ console.log("$scope.signUps[i].id, $scope.signUps[i].mealId, i", i, $scope.signU
 			});
 		}
 	};
-
 
 
 	// function provides the conditional based on deadline, 
