@@ -26,7 +26,6 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 		SignUpFactory.getSignUpzList(mealId)
 			.then((signUpz) => {
 	  			$scope.signUps = signUpz;
-	console.log("before return to deleteSignUps / $scope.signUps :: ", $scope.signUps);
 			})
 			.catch((error) => {
 			 	console.log("error on getSignUpList", error);
@@ -35,7 +34,6 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 
 
 	$scope.thisUserSignedUp = () => {
-console.log("$rootScope.user.uid, $scope.signUps.memberId :: ", $rootScope.user.uid, $scope.signUps.memberId);
 		for (let i=0; i<$scope.signUps.length; i++) {
 			if ($rootScope.user.uid === $scope.signUps.memberId) {
 				return true;
@@ -47,29 +45,8 @@ console.log("$rootScope.user.uid, $scope.signUps.memberId :: ", $rootScope.user.
 	
 
 	$scope.deleteMeal = (mealId) => {
-
-		// deleteCookTeam(mealId);
-
-// console.log("$scope.signUps to loop through for delete:: ", $scope.signUps);
-		// for (let i=0; i<$scope.signUps.length; i++) {
-			// if ($scope.signUp !== null ) {
-				// if (mealId === $scope.signUps[i].mealId) {
-// console.log("$scope.signUps[i].id :: ", $scope.signUps[i].id);
-				// 	SignUpFactory.deletzSignUp($scope.signUps[i].id)
-				// 	.then(() => {
-
-				// 	})
-				// 	.catch((error) => {
-				// 		console.log("error on deletzSignUp", error);
-				// 	});
-				// }
-			// }
-		// }
-		
-		// delete Meal
 		SchedulingFactory.deletzMeal(mealId)
 		.then(() => {
-console.log("returned from deletzMeal");
 			$location.url('/meals/list');
 		})
 		.catch((error) => {

@@ -23,9 +23,6 @@
 
         <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
 
-
-<!-- change seed file and use this if implement timepicker in ADD function -->
-<!-- <td>{{meal.time | date: format: shortTime}}</td> -->
         <td>{{meal.time}}</td>
 
         <td class="cookNames"><span ng-repeat="cookName in meal.cookNames">{{cookName}} </span></td>
@@ -51,7 +48,6 @@
     </thead>
     <tbody>
       
-      <!-- <tr ng-repeat="meal in meals | filter:{signedUp:true}"> -->
       <tr class="active" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date">
         
         <td><a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
@@ -59,8 +55,7 @@
         <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button></td>
 
         <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
-        <!-- change seed file and use this if implement timepicker in ADD function -->
-        <!-- <td>{{meal.time | date: format: shortTime}}</td> -->
+        
         <td>{{meal.time}}</td>
 
         <td class="cookNames"><span ng-repeat="cookName in meal.cookNames">{{cookName}} </span></td>
