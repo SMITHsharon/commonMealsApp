@@ -8,8 +8,8 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 
 
 	SchedulingFactory.getSingleMeal(mealId)
-		.then((results) => {
-	  		$scope.thisMeal = results.data;
+		.then((thizMeal) => {
+	  		$scope.thisMeal = thizMeal.data;
 			CookTeamFactory.getCookTeam(mealId)
 			.then((cookNamez) => {
 				$scope.cooks = cookNamez;
