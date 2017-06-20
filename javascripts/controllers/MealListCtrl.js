@@ -1,3 +1,4 @@
+/*jshint loopfunc: true */
 app.controller("MealListCtrl", function($location, $rootScope, $scope, SchedulingFactory, CookTeamFactory, SignUpFactory, UserFactory) {
 
 
