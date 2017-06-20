@@ -69,7 +69,6 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 
 	$scope.deleteMeal = (mealId) => {
-	// delete Meal
 		SchedulingFactory.deletzMeal(mealId)
 		.then(() => {
 			$location.url('/meals/list');

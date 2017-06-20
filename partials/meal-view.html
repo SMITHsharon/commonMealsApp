@@ -3,8 +3,9 @@
 	<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
 	<h5>Time: {{thisMeal.time}}</h5>
 	<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
-	<!-- <h5>Cook Team: cook team</h5> -->
+	
 	<h5 class="cooks">Cook Team: <span ng-repeat="cook in cooks">{{cook}} </span></h5>
+	
 	<h4>Menu: {{thisMeal.menu}}</h4>
 	<h4>Veggie Option: {{thisMeal.veggie}}</h4>
 	<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
@@ -33,10 +34,9 @@
 	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
 	        
 	        	<td ng-show="user.uid === signUp.memberId"><a href="#!/meal/signup/edit/{{thisMeal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
-	        	<!-- <td ng-show="user.uid === signUp.memberId"><a href="#!/meal/edit/{{meal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td> -->
+	        	
 	        	<td ng-show="user.uid !== signUp.memberId"></td>
 
-		        <!-- show guest name here -->
 		        <td>{{signUp.name}}</a></td>
 		        <td>{{signUp.adults}}</td>
 		        <td>{{signUp.children}}</td>
@@ -48,11 +48,8 @@
 	    </tbody>
 	</table>
 
-	<!-- if user is on cook team ... add buttons for Edit Meal, Delete Meal -->
-<!-- why is this button showing up if current user is signed up ??? -->
 	<div ng-show="user.uid !== signUp.memberId">
 		<a href="#!/meal/signup/{{thisMeal.id}}"><button class="btn btn-primary btn-xs signUp">Sign Up</button></a>
-		<!-- if user is signed-up ... add button to Delete Sign-Up -->
 	</div>
 </div>
 

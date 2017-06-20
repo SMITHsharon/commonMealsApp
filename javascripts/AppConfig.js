@@ -12,7 +12,7 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthFactory) {
 
   // Watch method that fires on change of a route.  Three inputs. 
   // Event is a change event
-  // currRoute is information about your current route
+  // currRoute is information about current route
   // prevRoute is information about the route you came from
   $rootScope.$on('$routeChangeStart', function(event, currRoute, prevRoute) {
     // checks to see if there is a current user
@@ -38,7 +38,7 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthFactory) {
 });
 
 
-// my filters
+// defined filters
 app.filter('isAfter', function() {
   return function(meals, dateAfter) {
     // Using ES6 filter method
@@ -48,21 +48,12 @@ app.filter('isAfter', function() {
   };
 });
 
-// app.filter('afterDeadline', function() {
-//   return function(meals, dateAfter) {
-//     // Using ES6 filter method
-//     return meals.filter(function(meal){
-//       return moment(meal.deadline).isAfter(dateAfter);
-//     });
-//   };
-// });
-
-app.filter('isSignedUp', function() {
-  return function(meals, signUps) {
-console.log("meal.id // signUp.mealId :: ", meal.id, signUp.Id);
-    if (meal.id === signUp.mealId) {
-      return true;
-    }
+app.filter('afterDeadline', function() {
+  return function(meals, dateAfter) {
+    // Using ES6 filter method
+    return meals.filter(function(meal){
+      return moment(meal.deadline).isAfter(dateAfter);
+    });
   };
 });
 
@@ -115,5 +106,3 @@ app.config(function($routeProvider) {
         })
         .otherwise('/auth'); // default catch
 });
-
-

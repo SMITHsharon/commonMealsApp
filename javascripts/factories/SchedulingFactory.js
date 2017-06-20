@@ -83,7 +83,6 @@ app.factory("SchedulingFactory", function($http, $q, FIREBASE_CONFIG) {
 	};
 
 
-
  	return {
  		getMealList:getMealList,
  		getSingleMeal:getSingleMeal,

@@ -1,9 +1,6 @@
 app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 
 	let getCookTeam = (mealId) => {
-	// let getCookTeam = (mealId, meals) => {
-// console.log("meals :: ", meals);
-	// let getMealList = (userId) => {
 	    let cookz = [];
 	    let cookNamez = [];
 	    return $q((resolve, reject) => {
@@ -37,7 +34,6 @@ app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG)
 
  	let assignCook = (mealId, memberId) => {
 	    return $q((resolve, reject) => {
-// console.log("consoling auth", authData);
 	      $http.post(`${FIREBASE_CONFIG.databaseURL}/cookTeams.json`, 
 	        JSON.stringify({ 
 	          memberId: memberId,
@@ -60,4 +56,3 @@ app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG)
  	};
 
 });
-

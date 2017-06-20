@@ -39,17 +39,15 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 
 
 	let getThisMemberName = (memberId) => {
-// console.log("memberId :: ", memberId);
 		return $q((resolve, reject) => {
 	      $http.get(`${FIREBASE_CONFIG.databaseURL}/users.json?orderBy="uid"&equalTo="${memberId}"`)
 	        .then((userObject) => {
-// console.log("userObject :: ", userObject);
 	          let users = [];
 	          Object.keys(userObject.data).forEach((key) => {
 	            users.push(userObject.data[key]);
 	            users[0].id = key;
 	          });
-	          // this returns the user's profile
+	          // return the user's profile
 	          resolve(users[0].username);
 	        })
 	        .catch((error) => {
@@ -84,7 +82,7 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	    var user = firebase.auth().currentUser;
 	      user.updateEmail(newEmail).then(function() {
 	    }, function(error) {
-	        // An error happened.
+	        reject(error);
 	    });
 	};
 
@@ -117,4 +115,3 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	};
 
 });
-
