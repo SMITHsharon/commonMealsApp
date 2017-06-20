@@ -33,9 +33,11 @@
 	    <tbody>
 	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
 	        
-	        	<td ng-show="user.uid === signUp.memberId"><a href="#!/meal/signup/edit/{{thisMeal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
-	        	
-	        	<td ng-show="user.uid !== signUp.memberId"></td>
+	        	<td ng-show="user.uid === signUp.memberId">
+	        		<a href="#!/meal/signup/edit/{{thisMeal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a>
+
+	        		<button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(thisMeal.id)">Delete Sign-Up</button>
+        		</td>
 
 		        <td>{{signUp.name}}</a></td>
 		        <td>{{signUp.adults}}</td>

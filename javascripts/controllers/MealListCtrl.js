@@ -14,6 +14,7 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 	   	UserFactory.getUser($rootScope.user.uid).then((user) => {
 	    	$scope.thisUser.username = user.username;
 	    	$scope.thisUser.userId = user.uid;
+	    	$scope.thisUser.profilePicURL = user.profilePicURL;
 	    }).catch();
 	};
 
@@ -87,7 +88,8 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 			}
 			SignUpFactory.deletzSignUp(signUpId)
 			.then(() => {
-				$location.url("/meals/list");
+				$scope.meals = {};
+				getMeals();
 			})
 			.catch((error) => {
 			console.log("error on deleteSignUp", error);

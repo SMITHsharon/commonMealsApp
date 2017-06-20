@@ -1,9 +1,12 @@
 
 <div class="container mealsListPage">
 
+ 
+  <img src="{{thisUser.profilePicURL}}" class="profilePic">
   <h3 class="hiUser">Hi {{thisUser.username}}</h3>
+
   
-  <h3 class="tableLabel">Meals On Tap</h3>
+  <h4 class="tableLabel">Meals On Tap</h4>
   <table class="table table-condensed ">
     <thead class="thead-default">
       <tr>
@@ -34,7 +37,7 @@
   </table>
 
 
-  <h3 class="tableLabel">Meals You've Signed Up For</h3>
+  <h4 class="tableLabel">Meals You've Signed Up For</h4>
   <table class="table table-condensed">
     <thead class="thead-default">
       <tr>
@@ -50,9 +53,11 @@
       
       <tr class="active" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date">
         
-        <td><a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
-        
-        <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button></td>
+        <td>
+          <a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
+          
+          <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button>
+        </td>
 
         <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
         

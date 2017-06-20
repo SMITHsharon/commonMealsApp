@@ -46,8 +46,14 @@
 	                        <input type="text" class="form-control" placeholder="Comments" ng-model="newSignUp.comments"/>
 	                </div>
 
-	                <div>
+	                <div class="addSignUpButtons" ng-hide="!addFunction">
 	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Add Sign-Up</button>
+
+	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
+                	</div>
+
+	                <div class="editSignUpButtons" ng-hide="addFunction">
+	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Update Sign-Up</button>
 
 	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
                 	</div>
@@ -64,7 +70,6 @@
 	    <thead class="thead-default">
 			<tr>
 		       <th></th>
-		       <th></th>
 		       <th># Adults</th>
 		       <th># Children</th>
 		       <th>Regular Meal</th>
@@ -74,8 +79,6 @@
 
 	    <tbody>
 	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
-	        
-        		<td ng-show="user.uid === signUp.memberId"><a href="#!/meal/edit/{{meal.id}}"><button type="button" class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a></td>
 
 		        <td>{{signUp.name}}</a></td>
 		        <td>{{signUp.adults}}</td>
