@@ -4,6 +4,7 @@ app.controller("MealSignUpCtrl", function($http, $location, $q, $routeParams, $r
 	$scope.cooks = [];
 	$scope.signUps = [];
 	$scope.newSignUp = {};
+	$scope.addFunction = true;
 
 	let mealId = $routeParams.id;
 

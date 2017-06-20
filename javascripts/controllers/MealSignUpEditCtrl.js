@@ -4,7 +4,7 @@ app.controller("MealSignUpEditCtrl", function($location, $routeParams, $rootScop
 	$scope.cooks = [];
 	$scope.signUps = [];
 	$scope.newSignUp = [];
-	$scope.currentPath = $location.path();
+	$scope.addFunction = false;
 
 	let mealId = $routeParams.id;
 

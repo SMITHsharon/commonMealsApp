@@ -46,8 +46,14 @@
 	                        <input type="text" class="form-control" placeholder="Comments" ng-model="newSignUp.comments"/>
 	                </div>
 
-	                <div>
+	                <div class="addSignUpButtons" ng-hide="!addFunction">
 	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Add Sign-Up</button>
+
+	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
+                	</div>
+
+	                <div class="editSignUpButtons" ng-hide="addFunction">
+	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Update Sign-Up</button>
 
 	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
                 	</div>
