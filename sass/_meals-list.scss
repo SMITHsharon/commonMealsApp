@@ -1,11 +1,28 @@
 @import "colors";
+@import "fonts";
+
+.mealsListPage {
+
+	.hiUser {
+		font-style: italic;
+	}
+
+	font-family: $istok;
+	color: $blue;
+}
+
 
 table {
+
+	.tableLabel {
+		font-weight: 900;
+	}
 
 	td {
 
 		.cookNames {
 			padding-right: 5px;
 		}
+
 	}
 }

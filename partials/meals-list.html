@@ -1,9 +1,10 @@
 
-<div class="container">
+<div class="container mealsListPage">
 
-  <h4>Hi {{thisUser.username}}</h4>
-  <h4>Meals On Tap</h4>
-  <table class="table table-condensed">
+  <h3 class="hiUser">Hi {{thisUser.username}}</h3>
+  
+  <h3 class="tableLabel">Meals On Tap</h3>
+  <table class="table table-condensed ">
     <thead class="thead-default">
       <tr>
         <th>Sign Up</th>
@@ -16,9 +17,9 @@
     </thead>
     <tbody>
 
-      <tr ng-repeat="meal in meals | isAfter:date | filter:{signedUp:false}">
+      <tr class="info" ng-repeat="meal in meals | isAfter:date | filter:{signedUp:false}">
         
-        <td><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-default btn-xs signUp">Sign Up</button></a></td>
+        <td><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-primary btn-xs signUp">Sign Up</button></a></td>
 
         <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
 
@@ -36,7 +37,7 @@
   </table>
 
 
-  <h4>Meals You've Signed Up For</h4>
+  <h3 class="tableLabel">Meals You've Signed Up For</h3>
   <table class="table table-condensed">
     <thead class="thead-default">
       <tr>
@@ -45,14 +46,15 @@
         <th>Time</th>
         <th>Cook Team</th>
         <th>Menu</th>
+        <th>Veggie Option</th>
       </tr>
     </thead>
     <tbody>
       
       <!-- <tr ng-repeat="meal in meals | filter:{signedUp:true}"> -->
-      <tr ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date">
+      <tr class="active" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date">
         
-        <td><a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-default btn-xs signUp">Edit Sign-Up</button></a>
+        <td><a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
         
         <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button></td>
 

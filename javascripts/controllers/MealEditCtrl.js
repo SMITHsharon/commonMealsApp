@@ -14,6 +14,8 @@ app.controller("MealEditCtrl", function($location, $routeParams, $rootScope, $sc
 
 	SchedulingFactory.getSingleMeal($routeParams.id)
 		.then((results) => {
+			results.data.deadline = new Date(results.data.deadline);
+			results.data.mealDate = new Date(results.data.mealDate);
 	  		$scope.newMeal = results.data;
 	  		$scope.thisMeal = results.data;
 	  		// getCooks($scope.meals[i].id);

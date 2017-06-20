@@ -6,6 +6,15 @@
 .navbar .navbar-brand {
   font-size: 1em; }
 
+.mealsListPage {
+  font-family: "Istok Web", sans-serif;
+  color: blue; }
+  .mealsListPage .hiUser {
+    font-style: italic; }
+
+table .tableLabel {
+  font-weight: 900; }
+
 table td .cookNames {
   padding-right: 5px; }
 
