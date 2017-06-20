@@ -4,7 +4,7 @@
             "mealDate": "2017-05-31T05:00:00.000Z",
             "time": "5:00pm",
             "deadline": "2017-05-30T05:00:00.000Z",
-            "uid": "",
+            "uid": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "menu": "Hamburgers, Hot Dogs, Chicken, grilled corn-on-the-cob, salad, ice cream",
             "veggie": "grilled veggies, pasta salad",
             "estCost": 5.50,
@@ -15,7 +15,7 @@
             "mealDate": "2017-06-10T05:00:00.000Z",
             "time": "10:00am",
             "deadline": "2017-06-08T05:00:00.000Z",
-            "uid": "",
+            "uid": "9ue2UXVtMubVvm7xfDOP97pAhwC3",
             "menu": "Baked eggs in wine breakfast; meats; fruit dish; biscuits",
             "veggie": "Soysage for vegetarians",
             "estCost": 5.00,
@@ -26,7 +26,7 @@
             "mealDate": "2017-06-15T05:00:00.000Z",
             "time": "6:30pm",
             "deadline": "2017-06-13T05:00:00.000Z",
-            "uid": "",
+            "uid": "gvRgx0QpScQT6x0tQHV3aXZCiYc2",
             "menu": "Chicken Marengo, couscous, salad",
             "veggie": "tofu Marengo",
             "estCost": 5.50,
@@ -37,7 +37,7 @@
             "mealDate": "2017-07-13T05:00:00.000Z",
             "time": "7:00pm",
             "deadline": "2017-07-12T05:00:00.000Z",
-            "uid": "",
+            "uid": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "menu": "Grilled Chicken, Rice, and Salad",
             "veggie": "Grilled Portobellos",
             "estCost": 5.50,
@@ -48,7 +48,7 @@
             "mealDate": "2017-07-15T05:00:00.000Z",
             "time": "10:00am",
             "deadline": "2017-07-13T05:00:00.000Z",
-            "uid": "",
+            "uid": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "menu": "Eggs, cheese grits, pastries!",
             "veggie": "",
             "estCost": 5.00,
@@ -59,7 +59,7 @@
             "mealDate": "2017-07-19T05:00:00.000Z",
             "time": "6:30pm",
             "deadline": "2017-07-18T05:00:00.000Z",
-            "uid": "",
+            "uid": "mn8ogUkUDxgfJ8Rd8VGYJVuYqaG2",
             "menu": "grilled cheese sandwiches, soup, salad",
             "veggie": "",
             "estCost": 4.50,
@@ -70,7 +70,7 @@
             "mealDate": "2017-07-22T05:00:00.000Z",
             "time": "6:30pm",
             "deadline": "2017-07-21T05:00:00.000Z",
-            "uid": "",
+            "uid": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "menu": "salmon, wild rice, salad, pie!, ice cream",
             "veggie": "grilled veggies, pasta salad",
             "estCost": 7.00,
@@ -81,7 +81,7 @@
             "mealDate": "2017-07-19T05:00:00.000Z",
             "time": "6:30pm",
             "deadline": "2017-07-18T05:00:00.000Z",
-            "uid": "",
+            "uid": "V7F09zuQSzYH0ATno7VK3kXn8Ty1",
             "menu": "Pizza and galette des rois",
             "veggie": "",
             "estCost": 4.50,
@@ -92,7 +92,7 @@
     "cookTeams": {
         "cookTeam0": {
             "mealId": "meal0",
-            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam1": {
             "mealId": "meal0",
@@ -104,7 +104,7 @@
         },
         "cookTeam3": {
             "mealId": "meal1",
-            "memberId": "user11"
+            "memberId": "9ue2UXVtMubVvm7xfDOP97pAhwC3"
         },
         "cookTeam4": {
             "mealId": "meal1",
@@ -112,11 +112,11 @@
         },
         "cookTeam5": {
             "mealId": "meal1",
-            "memberId": "user5"
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
         },
         "cookTeam6": {
             "mealId": "meal2",
-            "memberId": "user1"
+            "memberId": "gvRgx0QpScQT6x0tQHV3aXZCiYc2"
         },
         "cookTeam7": {
             "mealId": "meal2",
@@ -128,23 +128,23 @@
         },
         "cookTeam9": {
             "mealId": "meal3",
-            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam10": {
             "mealId": "meal3",
-            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
         },
         "cookTeam11": {
             "mealId": "meal3",
-            "memberId": "user8"
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2"
         },
         "cookTeam12": {
             "mealId": "meal4",
-            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1"
         },
         "cookTeam13": {
             "mealId": "meal4",
-            "memberId": "user11"
+            "memberId": "wj29Epatm7Zvvso6lttLyveo4ym1"
         },
         "cookTeam14": {
             "mealId": "meal4",
@@ -152,11 +152,11 @@
         },
         "cookTeam15": {
             "mealId": "meal5",
-            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2"
+            "memberId": "mn8ogUkUDxgfJ8Rd8VGYJVuYqaG2"
         },
         "cookTeam16": {
             "mealId": "meal5",
-            "memberId": "user10"
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2"
         },
         "cookTeam17": {
             "mealId": "meal5",
@@ -164,33 +164,33 @@
         },
         "cookTeam18": {
             "mealId": "meal6",
-            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
+            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2"
         },
         "cookTeam19": {
             "mealId": "meal6",
-            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
         },
         "cookTeam20": {
             "mealId": "meal6",
-            "memberId": "user8"
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52"
         },
         "cookTeam21": {
             "mealId": "meal7",
-            "memberId": "user1"
+            "memberId": "V7F09zuQSzYH0ATno7VK3kXn8Ty1"
         },
         "cookTeam22": {
             "mealId": "meal7",
-            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1"
+            "memberId": "Unfe9WMhdORMVYDT126bARePQYC3"
         },
         "cookTeam23": {
             "mealId": "meal7",
-            "memberId": "user8"
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1"
         }
     },
     "signUps": {
         "signUp0": {
             "mealId": "meal2",
-            "memberId": "user1",
+            "memberId": "gvRgx0QpScQT6x0tQHV3aXZCiYc2",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -217,7 +217,7 @@
         },
         "signUp3": {
             "mealId": "meal2",
-            "memberId": "user3",
+            "memberId": "cXTAYY69cxdlqsVxnUpRiDdLLlB3",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -226,7 +226,7 @@
         },
         "signUp4": {
             "mealId": "meal2",
-            "memberId": "user7",
+            "memberId": "KmMeed9eLoY1DPbbBdLRHLCkxCi1",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -244,7 +244,7 @@
         },
         "signUp6": {
             "mealId": "meal3",
-            "memberId": "user10",
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "regularMeal": false,
             "veggie": true,
             "adults": 2,
@@ -253,7 +253,7 @@
         },
         "signUp7": {
             "mealId": "meal3",
-            "memberId": "user4",
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -262,7 +262,7 @@
         },
         "signUp8": {
             "mealId": "meal3",
-            "memberId": "user8",
+            "memberId": "aU2T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
             "adults": 4,
@@ -271,7 +271,7 @@
         },
         "signUp9": {
             "mealId": "meal3",
-            "memberId": "user1",
+            "memberId": "KmMeed9eLoY1DPbbBdLRHLCkxCi1",
             "regularMeal": false,
             "veggie": true,
             "adults": 4,
@@ -280,7 +280,7 @@
         },
         "signUp10": {
             "mealId": "meal3",
-            "memberId": "user11",
+            "memberId": "9ue2UXVtMubVvm7xfDOP97pAhwC3",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -298,7 +298,7 @@
         },
         "signUp12": {
             "mealId": "meal4",
-            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -307,7 +307,7 @@
         },
         "signUp13": {
             "mealId": "meal4",
-            "memberId": "user11",
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -316,19 +316,19 @@
         },
         "signUp14": {
             "mealId": "meal4",
-            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
+            "memberId": "wj29Epatm7Zvvso6lttLyveo4ym1",
             "regularMeal": true,
             "veggie": false,
-            "adults": 2,
+            "adults": 1,
             "children": 0,
             "comments": ""
         },
         "signUp15": {
             "mealId": "meal4",
-            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
-            "adults": 1,
+            "adults": 2,
             "children": 0,
             "comments": ""
         },
@@ -343,7 +343,7 @@
         },
         "signUp17": {
             "mealId": "meal5",
-            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2",
+            "memberId": "mn8ogUkUDxgfJ8Rd8VGYJVuYqaG2",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -352,7 +352,7 @@
         },
         "signUp18": {
             "mealId": "meal5",
-            "memberId": "user10",
+            "memberId": "LS3viiwPMkNTRCypSZ5Y6tcDYaU2",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -370,7 +370,7 @@
         },
         "signUp20": {
             "mealId": "meal5",
-            "memberId": "user11",
+            "memberId": "9ue2UXVtMubVvm7xfDOP97pAhwC3",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -388,16 +388,16 @@
         },
         "signUp22": {
             "mealId": "meal6",
-            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
+            "memberId": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "regularMeal": true,
             "veggie": false,
-            "adults": 1,
+            "adults": 2,
             "children": 0,
             "comments": ""
         },
         "signUp23": {
             "mealId": "meal6",
-            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -406,16 +406,16 @@
         },
         "signUp24": {
             "mealId": "meal6",
-            "memberId": "user8",
+            "memberId": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "regularMeal": true,
             "veggie": false,
-            "adults": 2,
+            "adults": 1,
             "children": 0,
             "comments": ""
         },
         "signUp25": {
             "mealId": "meal6",
-            "memberId": "user1",
+            "memberId": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -424,7 +424,7 @@
         },
         "signUp26": {
             "mealId": "meal7",
-            "memberId": "user1",
+            "memberId": "V7F09zuQSzYH0ATno7VK3kXn8Ty1",
             "regularMeal": true,
             "veggie": false,
             "adults": 1,
@@ -433,7 +433,16 @@
         },
         "signUp27": {
             "mealId": "meal7",
-            "memberId": "user7",
+            "memberId": "Unfe9WMhdORMVYDT126bARePQYC3",
+            "regularMeal": true,
+            "veggie": false,
+            "adults": 2,
+            "children": 0,
+            "comments": ""
+        },
+        "signUp28": {
+            "mealId": "meal7",
+            "memberId": "T6biGdNRxah7GZciYKgibPXrYUu1",
             "regularMeal": true,
             "veggie": false,
             "adults": 2,
@@ -449,7 +458,7 @@
             "unit" : "1"
         },
         "user1": {
-            "uid" : "xxx",
+            "uid" : "mn8ogUkUDxgfJ8Rd8VGYJVuYqaG2",
             "username" : "Sarah",
             "profilePicURL" : "",
             "unit" : "2"
@@ -461,19 +470,19 @@
             "unit" : "3"
         },
         "user3": {
-            "uid" : "xxx",
+            "uid" : "cXTAYY69cxdlqsVxnUpRiDdLLlB3",
             "username" : "John",
             "profilePicURL" : "",
             "unit" : "4"
         },
         "user4": {
-            "uid" : "xxx",
+            "uid" : "gvRgx0QpScQT6x0tQHV3aXZCiYc2",
             "username" : "Barbara",
             "profilePicURL" : "",
             "unit" : "4"
         },
         "user5": {
-            "uid" : "xxx",
+            "uid" : "Unfe9WMhdORMVYDT126bARePQYC3",
             "username" : "Mark",
             "profilePicURL" : "",
             "unit" : "5"
@@ -485,13 +494,13 @@
             "unit" : "5"
         },
         "user7": {
-            "uid" : "xxx",
+            "uid" : "KmMeed9eLoY1DPbbBdLRHLCkxCi1",
             "username" : "Chris",
             "profilePicURL" : "",
             "unit" : "6"
         },
         "user8": {
-            "uid" : "xxx",
+            "uid" : "wj29Epatm7Zvvso6lttLyveo4ym1",
             "username" : "MaryC",
             "profilePicURL" : "",
             "unit" : "6"
@@ -503,13 +512,13 @@
             "unit" : "7"
         },
         "user10": {
-            "uid" : "xxx",
+            "uid" : "V7F09zuQSzYH0ATno7VK3kXn8Ty1",
             "username" : "MaryH",
             "profilePicURL" : "",
             "unit" : "8"
         },
         "user11": {
-            "uid" : "xxx",
+            "uid" : "9ue2UXVtMubVvm7xfDOP97pAhwC3",
             "username" : "Dot",
             "profilePicURL" : "",
             "unit" : "18"
