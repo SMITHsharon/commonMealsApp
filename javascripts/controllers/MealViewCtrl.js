@@ -55,4 +55,21 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 	};
 
 
+	$scope.deleteSignUp = (mealId) => {
+		let signUpId = -1;
+		for (let i=0; i<$scope.signUps.length; i++) {
+			if ($scope.signUps[i].mealId === mealId) {
+				signUpId = $scope.signUps[i].id;
+			}
+			SignUpFactory.deletzSignUp(signUpId)
+			.then(() => {
+				$location.url("/meals/list");
+			})
+			.catch((error) => {
+			console.log("error on deleteSignUp", error);
+			});
+		}
+	};
+
+
 });
