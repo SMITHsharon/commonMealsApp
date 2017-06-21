@@ -3,7 +3,7 @@
 		<div class="col-xs-6 mealInfo">
 
 			<h1 class="tableTitle">What's for Dinner?</h1>	
-			<h4 class="menuHead">Menu: <span class="menuData">{{thisMeal.menu}}</span></h4>
+			<h4 class="menuHead"><span class="menuData">{{thisMeal.menu}}</span></h4>
 			<h4 class="menuHead">Veggie Option: <span class="menuData">{{thisMeal.veggie}}</span></h4>
 
 			<table class="table mealTable">
@@ -43,7 +43,7 @@
 		    <button type="button" class="btn btn-warning btn-xs deleteMeal" ng-click="deleteMeal(thisMeal.id)">Delete Meal</button>
 		</div> <!-- .col -->
 
-		<div class="col-xs-6">
+		<div class="col-xs-6 guestListSection">
 			<div ng-show="user.uid !== signUp.memberId">
 				<h1 class="tableTitle">Guest List <a href="#!/meal/signup/{{thisMeal.id}}"><button class="btn btn-primary btn-xs signUpButton pull-right">Sign Up</button></a></h1>
 			</div>

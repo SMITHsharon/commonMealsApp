@@ -53,9 +53,11 @@
     font-size: 1.5em; }
   .mealViewPage .mealInfo .thisCook {
     padding-right: 7px; }
-  .mealViewPage .guestList a .signUpButton {
+  .mealViewPage .guestListSection h1 {
+    margin-top: 89px; }
+  .mealViewPage .guestListSection a .signUpButton {
     font-family: "Istok Web", sans-serif; }
-  .mealViewPage .guestList button {
+  .mealViewPage .guestListSection button {
     margin-top: 15px; }
   .mealViewPage .mealTable {
     background-color: #C7DDF0; }

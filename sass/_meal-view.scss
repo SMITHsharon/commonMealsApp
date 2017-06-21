@@ -27,7 +27,11 @@
 	}
 
 
-	.guestList {
+	.guestListSection {
+
+		h1 {
+			margin-top: 89px;
+		}
 
 		a .signUpButton {
 			font-family: $istok;
