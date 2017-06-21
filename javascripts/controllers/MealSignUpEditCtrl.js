@@ -27,6 +27,11 @@ app.controller("MealSignUpEditCtrl", function($location, $routeParams, $rootScop
 		SignUpFactory.getSignUpzList(mealId)
 			.then((signUpz) => {
 	  			$scope.signUps = signUpz;
+	  			signUpz.forEach((signUp) => {
+	  				if ((signUp.mealId === mealId) && (signUp.memberId === $rootScope.user.uid)) {
+	  					$scope.newSignUp = signUp;
+	  				}
+	  			});
 			})
 			.catch((error) => {
 			 	console.log("error on getSignUpList", error);

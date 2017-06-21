@@ -100,6 +100,33 @@ h1 {
   .mealAddPage .btn {
     margin-right: 10px; }
 
+.mealSignUpPage {
+  font-family: "Istok Web", sans-serif; }
+  .mealSignUpPage h2, .mealSignUpPage h3 {
+    font-family: "Dancing Script", cursive;
+    color: #D40473; }
+  .mealSignUpPage h3.menuHead {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .mealSignUpPage .mealInfo .menuHead {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.2em;
+    color: #D40473; }
+  .mealSignUpPage .mealInfo .menuData {
+    font-size: 1.5em; }
+  .mealSignUpPage .mealInfo .thisCook {
+    padding-right: 7px; }
+  .mealSignUpPage .checkBoxSection {
+    padding-left: 35px; }
+  .mealSignUpPage .guestListSection h3 {
+    margin-top: 89px; }
+  .mealSignUpPage .guestListTable {
+    background-color: #C7DDF0; }
+    .mealSignUpPage .guestListTable .tableHead {
+      font-weight: 900; }
+    .mealSignUpPage .guestListTable th, .mealSignUpPage .guestListTable td {
+      text-align: center; }
+
 body {
   background-size: cover;
   background-image: url("/images/background9.jpg");
