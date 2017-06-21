@@ -1,40 +1,44 @@
 @import "colors";
+@import "fonts";
 
-.navbar {
+.jumbotron {
 
-	background-color: $lightbluegray;
+	.navbar {
 
-	.nav {
+		background-color: $lightbluegray;
 
-		a:link {
+		li {
 
-			color: $darkblue;
+			a:link {
+				color: $darkblue;
+			}
+
+			a:hover {
+				color: $lightgray;
+			}
+
+			a:active {
+				color: $burgundy;
+			}
+			
 		}
 
-		a:hover {
-			color: $lightgray;
+
+		.logo {
+			display: inline-block;
+			width: 50px;
+			margin-top: -8px;
 		}
 
-		a:active {
-			color: $burgundy;
+		.navbar-header {
+			a:link {
+				color: $darkblue;
+			}
+
+			.navbar-brand {
+				font-size: 1em;
+			}
 		}
+
 	}
-
-	.logo {
-		display: inline-block;
-		width: 50px;
-		margin-top: -8px;
-	}
-
-	.navbar-header {
-		a:link {
-			color: $darkblue;
-		}
-
-		.navbar-brand {
-			font-size: 1em;
-		}
-	}
-
-	
 }

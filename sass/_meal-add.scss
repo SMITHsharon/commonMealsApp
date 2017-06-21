@@ -1,0 +1,35 @@
+@import "colors";
+@import "fonts";
+
+.mealAddPage {
+
+	font-family: $istok;
+
+	h2, h3 {
+		font-family: $dancing;
+		color: $burgundy;
+	}
+
+	.menuInput {
+		margin-top: 10px;
+	}
+
+
+	.cooks {
+		padding-right: 12px;
+	}
+
+	.checkBoxSection {
+
+		padding-left: 35px;
+
+		.checkbox {
+			margin-top: 0;
+		}
+	}
+
+
+	.btn {
+		margin-right: 10px;
+	}
+}

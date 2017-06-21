@@ -1,19 +1,27 @@
-.navbar {
+.jumbotron .navbar {
   background-color: #C7DDF0; }
-  .navbar .nav a:link {
+  .jumbotron .navbar li a:link {
     color: #1F70B8; }
-  .navbar .nav a:hover {
+  .jumbotron .navbar li a:hover {
     color: #EBF2F5; }
-  .navbar .nav a:active {
+  .jumbotron .navbar li a:active {
     color: #D40473; }
-  .navbar .logo {
+  .jumbotron .navbar .logo {
     display: inline-block;
     width: 50px;
     margin-top: -8px; }
-  .navbar .navbar-header a:link {
+  .jumbotron .navbar .navbar-header a:link {
     color: #1F70B8; }
-  .navbar .navbar-header .navbar-brand {
+  .jumbotron .navbar .navbar-header .navbar-brand {
     font-size: 1em; }
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  color: #D40473; }
+
+.btn {
+  margin-top: 15px;
+  margin-right: 10px; }
 
 .mealsListPage {
   font-family: "Istok Web", sans-serif; }
@@ -75,6 +83,22 @@
       font-weight: 900; }
     .mealViewPage .guestListTable th, .mealViewPage .guestListTable td {
       text-align: center; }
+
+.mealAddPage {
+  font-family: "Istok Web", sans-serif; }
+  .mealAddPage h2, .mealAddPage h3 {
+    font-family: "Dancing Script", cursive;
+    color: #D40473; }
+  .mealAddPage .menuInput {
+    margin-top: 10px; }
+  .mealAddPage .cooks {
+    padding-right: 12px; }
+  .mealAddPage .checkBoxSection {
+    padding-left: 35px; }
+    .mealAddPage .checkBoxSection .checkbox {
+      margin-top: 0; }
+  .mealAddPage .btn {
+    margin-right: 10px; }
 
 body {
   background-size: cover;
