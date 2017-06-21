@@ -1,94 +1,103 @@
-<div class="container">
+<div class="container mealSignUpPage">
+
     <div class="row newSignUpForm">
-        <div class="col-xs-6">
-	        <h4>What's for Dinner?</h4>
-			<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
-			<h5>Time: {{thisMeal.time}}</h5>
-			<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
-			
-			<h5 class="cooks">Cook Team: <span ng-repeat="cook in cooks">{{cook}} </span></h5>
 
-			<h5>Menu: {{thisMeal.menu}}</h5>
-			<h5>Veggie Option: {{thisMeal.veggie}}</h5>
-			<h5>Comments: {{thisMeal.comments}}</h5>
-			<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
-        </div> <!-- .col -->
-    </div> <!-- .row -->
-
-    <div class="row ">
         <div class="col-xs-6"> <!-- sign-up col -->
-        	<h4>Sign-Up Information</h4>
+        	<h2 class="tableTitle">Sign-Up Information</h2>
 
 			<!-- sign-up input fields here -->
 			<form>
                 <div class="form-group">
-                    
-                    <label for="regMeal" class="checkbox">
-                    <input type="checkbox" id="regMeal" name="" ng-model="newSignUp.regularMeal" ng-checked="newSignUp.regularMeal" ng-change="inputChange(newSignUp.id)"/>
-                    Regular Meal</label>
+	                <div class="row">
+	                    <div class="checkBoxSection">
+	                    	<label for="regMeal" class="checkbox inline">
+		                    <input type="checkbox" id="regMeal" name="" ng-model="newSignUp.regularMeal" ng-checked="newSignUp.regularMeal" ng-change="inputChange(newSignUp.id)"/>
+		                    Regular Meal</label>
 
-                    <label for="veggieMeal" class="checkbox">
-                    <input type="checkbox" id="veggieMeal" name="" ng-model="newSignUp.veggie" ng-checked="newSignUp.veggie" ng-change="inputChange(newSignUp.id)"/>
-                    Veggie Option</label>
+		                    <label for="veggieMeal" class="checkbox inline">
+		                    <input type="checkbox" id="veggieMeal" name="" ng-model="newSignUp.veggie" ng-checked="newSignUp.veggie" ng-change="inputChange(newSignUp.id)"/>
+		                    Veggie Option</label>
+	                	</div>
 
-                    <div>
-                    	<label># Adults:</label>
-                        <input type="text" class="form-control" placeholder="# Adults" ng-model="newSignUp.adults"/>
-                	</div>
+	                    <div class="col-xs-3">
+		                    <input type="text" class="form-control" placeholder="# Adults" ng-model="newSignUp.adults"/>
+		                </div>
 
-                    <div>
-                    	<label># Children:</label>
-                        <input type="text" class="form-control" placeholder="# Children" ng-model="newSignUp.children"/>
-                	</div>
+		                <div class="col-xs-3">
+		                    <input type="text" class="form-control" placeholder="# Children" ng-model="newSignUp.children"/>
+			            </div>
+	                </div> <!-- .row -->
 
-	                <div>
-	                    <label>Comments</label>
-	                        <input type="text" class="form-control" placeholder="Comments" ng-model="newSignUp.comments"/>
-	                </div>
 
-	                <div class="addSignUpButtons" ng-hide="!addFunction">
-	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Add Sign-Up</button>
+		            <div class="row">
+			             <div class="col-xs-10">
+			                <input type="text" class="form-control" placeholder="Comments" ng-model="newSignUp.comments"/>
+			            </div>
+	                </div> <!-- .row -->
 
-	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
-                	</div>
 
-	                <div class="editSignUpButtons" ng-hide="addFunction">
-	                    <button class="btn btn-primary btn-sm" ng-click="addNewSignUp()">Update Sign-Up</button>
+	                <div class="row">
+		                <div class="col-xs-10 addSignUpButtons" ng-hide="!addFunction">
+		                    <button class="btn btn-primary btn-xs pull-right" ng-click="addNewSignUp()">Add Sign-Up</button>
 
-	                    <button type="button" class="btn btn-default btn-sm"><a ng-href="#!/meals/list">Cancel</a></button>
-                	</div>
+		                    <button type="button" class="btn btn-default btn-xs pull-right"><a ng-href="#!/meals/list">Cancel</a></button>
+	                	</div>
+
+		                <div class="col-xs-10 editSignUpButtons" ng-hide="addFunction">
+		                    <button class="btn btn-primary btn-xs pull-right" ng-click="addNewSignUp()">Update Sign-Up</button>
+
+		                    <button type="button" class="btn btn-default btn-xs pull-right"><a ng-href="#!/meals/list">Cancel</a></button>
+	                	</div>
+	                </div> <!-- .row -->
+
 
                 </div> <!-- .form-group -->
             </form> <!-- form -->
+
+			<div class="guestListSection">
+				<h2 class="tableTitle">Guest List</h2>
+				<table class="table guestListTable">
+				    <thead class="thead-default">
+						<tr>
+					       <th></th>
+					       <th># Adults</th>
+					       <th># Children</th>
+					       <th>Regular Meal</th>
+					       <th>Veggie</th>
+						</tr>
+				    </thead>
+
+				    <tbody>
+				    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
+
+					        <td>{{signUp.name}}</a></td>
+					        <td>{{signUp.adults}}</td>
+					        <td>{{signUp.children}}</td>
+					        <td ng-show="signUp.regularMeal">yes</td>
+					        <td ng-show="!signUp.regularMeal">no</td>
+					        <td ng-show="signUp.veggie">yes</td>
+					        <td ng-show="!signUp.veggie">no</td>
+				      	</tr>
+				    </tbody>
+				</table>
+			</div> <!-- .guestListSection -->
+        </div> <!-- .col -->
+    
+
+        <div class="col-xs-6 mealInfo">
+	        <h2 class="tableTitle">What's for Dinner?</h2>
+	        <h3 class="menuHead">Menu: {{thisMeal.menu}}</h3>
+			<h3 class="menuHead">Veggie Option: {{thisMeal.veggie}}</h3>
+
+			<h5 class="cooks">Cook Team: <span class="thisCook" ng-repeat="cook in cooks">{{cook}} </span></h5>
+
+			<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
+			<h5>Time: {{thisMeal.time}}</h5>
+			<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
+
+			<h5>Comments: {{thisMeal.comments}}</h5>
+			<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
         </div> <!-- .col -->
     </div> <!-- .row -->
-</div> <!-- .container -->
-
-<div class="container">
-	<h4>Guest List</h4>
-	<table class="table">
-	    <thead class="thead-default">
-			<tr>
-		       <th></th>
-		       <th># Adults</th>
-		       <th># Children</th>
-		       <th>Regular Meal</th>
-		       <th>Veggie</th>
-			</tr>
-	    </thead>
-
-	    <tbody>
-	    	<tr ng-repeat="signUp in signUps | filter: thisMeal.id">
-
-		        <td>{{signUp.name}}</a></td>
-		        <td>{{signUp.adults}}</td>
-		        <td>{{signUp.children}}</td>
-		        <td ng-show="signUp.regularMeal">yes</td>
-		        <td ng-show="!signUp.regularMeal">no</td>
-		        <td ng-show="signUp.veggie">yes</td>
-		        <td ng-show="!signUp.veggie">no</td>
-	      	</tr>
-	    </tbody>
-	</table>
 
 </div> <!-- .container -->

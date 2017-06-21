@@ -1,15 +1,15 @@
 <div uib-alert ng-repeat="alert in alerts" class="alert-danger">{{alert.msg}}</div>
 
 <div class="container col-xs-4 col-xs-offset-4" ng-if="!user.uid">
-	<h4>Common Meals App</h4>
+	<h1>Common Meals App</h1>
 	<input type="email" id="inputEmail" class="form-control form-spacing" placeholder="Email Address" ng-model="auth.email" required autofocus>
 	<input type="password" class="form-control form-spacing" placeholder="Password" ng-model="auth.password" required>
 	<input type="text" class="form-control form-spacing" placeholder="Member Name" ng-model="auth.username" required>
 	<input type="text" class="form-control form-spacing" placeholder="Profile Picture URL" ng-model="auth.profilePicURL">
 	<input type="text" class="form-control form-spacing" size="15" placeholder="Unit#" ng-model="auth.unit">
 
-	<button class="btn btn-sm btn-success col-xs-2 pull-right loginBtn" ng-click="loginUser()">Login</button>
-	<button class="btn btn-sm btn-primary col-xs-2 pull-right registerBtn" ng-click="registerUser()">Register</button>
+	<button class="btn btn-xs btn-success col-xs-2 pull-right loginBtn" ng-click="loginUser()">Login</button>
+	<button class="btn btn-xs btn-primary col-xs-2 pull-right registerBtn" ng-click="registerUser()">Register</button>
 </div>
 
 <div class="container col-xs-4 col-xs-offset-4" ng-if="user.uid">

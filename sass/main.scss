@@ -1,8 +1,11 @@
 @import "fonts";
 @import "colors";
 @import "navbar";
+@import "auth";
 @import "meals-list";
 @import "meal-view";
+@import "meal-add";
+@import "meal-signup";
 
 body {
 	background-size: cover;
