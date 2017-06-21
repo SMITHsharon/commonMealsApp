@@ -1,6 +1,12 @@
+@import "fonts";
+@import "colors";
 @import "navbar";
 @import "meals-list";
+@import "meal-view";
 
 body {
-	background-color: $lightgray;
+	background-size: cover;
+	background-image: url("/images/background9.jpg");
+	font-family: $istok;
+	max-width: 100%;
 }

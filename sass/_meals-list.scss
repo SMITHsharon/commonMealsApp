@@ -4,7 +4,6 @@
 .mealsListPage {
 	
 	font-family: $istok;
-	color: $blue;
 
 	.profilePic {
 		width: 50px;
@@ -16,27 +15,43 @@
 		display: inline;
 	}
 
-	h4 {
-		font-size: 1.2em;
+	h1 {
+		font-family: $dancing;
 	}
 
 	.hiUser {
+		font-family: $dancing;
 		font-style: italic;
 	}
 
 
 	table {
 
-		.tableLabel {
+		background-color: $lightbluegray;
+
+		.tableHead {
 			font-weight: 900;
 		}
 
 		td {
 
-			.cookNames {
+			.signUpButton {
 				padding-right: 5px;
+			}
+
+			.thisDate {
+				padding-right: 0;
+			}
+
+			.thisCook {
+				padding-right: 7px;
 			}
 
 		}
 	}
+
+	.signUpTable {
+		margin-top: 50px;
+	}
+
 }

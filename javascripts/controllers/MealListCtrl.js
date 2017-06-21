@@ -31,8 +31,6 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 			for (let i=0; i<$scope.meals.length; i++) {
 
-				$scope.meals[i].signedUp = false;
-
 				// get Cook Team for each Meal
 				CookTeamFactory.getCookTeam($scope.meals[i].id)
 				.then((cookNamez) => {
@@ -40,8 +38,14 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 					// get if current user is signed up for this meal 
 					for (let j=0; j<$scope.signUps.length; j++) {
-						if ($scope.meals[i].id === $scope.signUps[j].mealId) {
+						if ($scope.meals[i].id == $scope.signUps[j].mealId) {
 							$scope.meals[i].signedUp = true;
+
+							// write the screen before overwriting $scope.meals[i].signedUp
+							break; 
+						}
+						else {
+							$scope.meals[i].signedUp = false;
 						}
 					}
 				})

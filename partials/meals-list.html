@@ -6,11 +6,11 @@
   <h3 class="hiUser">Hi {{thisUser.username}}</h3>
 
   
-  <h4 class="tableLabel">Meals On Tap</h4>
-  <table class="table table-condensed ">
-    <thead class="thead-default">
+  <h1 class="tableTitle">Meals On Tap</h1>
+  <table class="table table-sm">
+    <thead class="tableHead">
       <tr>
-        <th>Sign Up</th>
+        <th class="tableHead">Sign Up</th>
         <th>Meal Date</th>
         <th>Time</th>
         <th>Cook Team</th>
@@ -20,15 +20,15 @@
     </thead>
     <tbody>
 
-      <tr class="info" ng-repeat="meal in meals | isAfter:date | filter:{signedUp:false}">
+      <tr class="info" ng-repeat="meal in meals | isAfter:date | filter:{signedUp:false}" ng-if="meal.signedUp !== null">
         
-        <td><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-primary btn-xs signUp">Sign Up</button></a></td>
+        <td><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-primary btn-xs signUpButton">Sign Up</button></a></td>
 
-        <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
+        <td class="thisDate"><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
 
         <td>{{meal.time}}</td>
 
-        <td class="cookNames"><span ng-repeat="cookName in meal.cookNames">{{cookName}} </span></td>
+        <td class="cookNames"><span class="thisCook" ng-repeat="cookName in meal.cookNames">{{cookName}} </span></td>
         
         <td>{{meal.menu}}</td>
         <td>{{meal.veggie}}</td>
@@ -37,38 +37,40 @@
   </table>
 
 
-  <h4 class="tableLabel">Meals You've Signed Up For</h4>
-  <table class="table table-condensed">
-    <thead class="thead-default">
-      <tr>
-        <th>Edit/Delete Your Sign-Ups</th>
-        <th>Meal Date</th>
-        <th>Time</th>
-        <th>Cook Team</th>
-        <th>Menu</th>
-        <th>Veggie Option</th>
-      </tr>
-    </thead>
-    <tbody>
-      
-      <tr class="active" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date">
+  <div class="signUpTable">
+    <h1 class="tableTitle">Meals You've Signed Up For</h1>
+    <table class="table table-condensed">
+        <tr>
+          <th>Edit/Delete Your Sign-Ups</th>
+          <th>Meal Date</th>
+          <th>Time</th>
+          <th>Cook Team</th>
+          <th>Menu</th>
+          <th>Veggie Option</th>
+        </tr>
+      </thead>
+      <tbody>
         
-        <td>
-          <a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
+        <tr class="active" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date" ng-if="meal.signedUp !== null">
           
-          <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button>
-        </td>
+          <td>
+            <a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
+            
+            <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button>
+          </td>
 
-        <td><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
-        
-        <td>{{meal.time}}</td>
+          <td class="thisDate"><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
+          
+          <td>{{meal.time}}</td>
 
-        <td class="cookNames"><span ng-repeat="cookName in meal.cookNames">{{cookName}} </span></td>
+          <td class="cookNames"><span class="thisCook" ng-repeat="cookName in meal.cookNames">{{cookName}} </span></td>
 
-        <td>{{meal.menu}}</td>
-        <td>{{meal.veggie}}</td>
-      </tr>
+          <td>{{meal.menu}}</td>
+          <td>{{meal.veggie}}</td>
+        </tr>
 
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div> <!-- .signUpTable -->
+
 </div>
