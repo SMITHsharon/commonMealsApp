@@ -1,28 +1,81 @@
-.navbar .logo {
-  display: inline-block;
-  width: 50px;
-  margin-top: -8px; }
-
-.navbar .navbar-brand {
-  font-size: 1em; }
+.navbar {
+  background-color: #C7DDF0; }
+  .navbar .nav a:link {
+    color: #1F70B8; }
+  .navbar .nav a:hover {
+    color: #EBF2F5; }
+  .navbar .nav a:active {
+    color: #D40473; }
+  .navbar .logo {
+    display: inline-block;
+    width: 50px;
+    margin-top: -8px; }
+  .navbar .navbar-header a:link {
+    color: #1F70B8; }
+  .navbar .navbar-header .navbar-brand {
+    font-size: 1em; }
 
 .mealsListPage {
-  font-family: "Istok Web", sans-serif;
-  color: blue; }
+  font-family: "Istok Web", sans-serif; }
   .mealsListPage .profilePic {
     width: 50px;
     height: 50px;
     border-radius: 50%; }
   .mealsListPage h3 {
     display: inline; }
-  .mealsListPage h4 {
-    font-size: 1.2em; }
+  .mealsListPage h1 {
+    font-family: "Dancing Script", cursive; }
   .mealsListPage .hiUser {
+    font-family: "Dancing Script", cursive;
     font-style: italic; }
-  .mealsListPage table .tableLabel {
-    font-weight: 900; }
-  .mealsListPage table td .cookNames {
-    padding-right: 5px; }
+  .mealsListPage table {
+    background-color: #C7DDF0; }
+    .mealsListPage table .tableHead {
+      font-weight: 900; }
+    .mealsListPage table td .signUpButton {
+      padding-right: 5px; }
+    .mealsListPage table td .thisDate {
+      padding-right: 0; }
+    .mealsListPage table td .thisCook {
+      padding-right: 7px; }
+  .mealsListPage .signUpTable {
+    margin-top: 50px; }
+
+.mealViewPage {
+  font-family: "Istok Web", sans-serif; }
+  .mealViewPage h1 {
+    font-family: "Dancing Script", cursive; }
+  .mealViewPage .mealInfo .menuHead {
+    font-family: "Dancing Script", cursive;
+    font-size: 1.2em;
+    color: #D40473; }
+  .mealViewPage .mealInfo .menuData {
+    font-size: 1.5em; }
+  .mealViewPage .mealInfo .thisCook {
+    padding-right: 7px; }
+  .mealViewPage .guestList a .signUpButton {
+    font-family: "Istok Web", sans-serif; }
+  .mealViewPage .guestList button {
+    margin-top: 15px; }
+  .mealViewPage .mealTable {
+    background-color: #C7DDF0; }
+    .mealViewPage .mealTable td.mealLabel {
+      text-align: right;
+      font-size: .9em;
+      font-weight: 900; }
+    .mealViewPage .mealTable td.mealValue {
+      text-align: left; }
+    .mealViewPage .mealTable .cooks {
+      padding-right: 10px; }
+  .mealViewPage .guestListTable {
+    background-color: #C7DDF0; }
+    .mealViewPage .guestListTable .tableHead {
+      font-weight: 900; }
+    .mealViewPage .guestListTable th, .mealViewPage .guestListTable td {
+      text-align: center; }
 
 body {
-  background-color: #EBF2F5; }
+  background-size: cover;
+  background-image: url("/images/background9.jpg");
+  font-family: "Istok Web", sans-serif;
+  max-width: 100%; }

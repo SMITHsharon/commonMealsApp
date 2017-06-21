@@ -1,3 +1,4 @@
+/*jshint loopfunc: true */
 app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $scope, SchedulingFactory, CookTeamFactory, SignUpFactory) {
 
 	$scope.thisMeal = {};
@@ -63,7 +64,7 @@ app.controller("MealViewCtrl", function($location, $routeParams, $rootScope, $sc
 			}
 			SignUpFactory.deletzSignUp(signUpId)
 			.then(() => {
-				$location.url("/meals/list");
+				$location.url('/meals/list');
 			})
 			.catch((error) => {
 			console.log("error on deleteSignUp", error);

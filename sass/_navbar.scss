@@ -1,4 +1,24 @@
+@import "colors";
+
 .navbar {
+
+	background-color: $lightbluegray;
+
+	.nav {
+
+		a:link {
+
+			color: $darkblue;
+		}
+
+		a:hover {
+			color: $lightgray;
+		}
+
+		a:active {
+			color: $burgundy;
+		}
+	}
 
 	.logo {
 		display: inline-block;
@@ -6,7 +26,15 @@
 		margin-top: -8px;
 	}
 
-	.navbar-brand {
-		font-size: 1em;
+	.navbar-header {
+		a:link {
+			color: $darkblue;
+		}
+
+		.navbar-brand {
+			font-size: 1em;
+		}
 	}
+
+	
 }

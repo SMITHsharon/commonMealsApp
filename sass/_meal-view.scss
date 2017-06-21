@@ -1,0 +1,80 @@
+@import "colors";
+@import "fonts";
+
+.mealViewPage {
+
+	font-family: $istok;
+
+	h1 {
+		font-family: $dancing;
+	}
+
+	.mealInfo {
+
+		.menuHead {
+			font-family: $dancing;
+			font-size: 1.2em;
+			color: $burgundy;
+		}
+
+		.menuData {
+			font-size: 1.5em;
+		}
+
+		.thisCook {
+			padding-right: 7px;
+		}
+	}
+
+
+	.guestList {
+
+		a .signUpButton {
+			font-family: $istok;
+		}
+
+		button { 
+			margin-top: 15px;
+		}
+	}
+
+
+	.mealTable {
+
+		background-color: $lightbluegray;
+		
+		td.mealLabel {
+			text-align: right;
+			font-size: .9em;
+			font-weight: 900;
+		}
+
+		td.mealValue {
+			text-align: left;
+		}
+
+		.cooks {
+			padding-right: 10px;
+		}
+
+	}
+
+
+	.guestListTable {
+
+		background-color: $lightbluegray;
+
+		.tableHead {
+			font-weight: 900;
+		}
+
+		th, td {
+			text-align: center;
+		}
+	}
+	
+
+	// .guestList {
+	// 	margin-top: 50px;
+	// }
+}
