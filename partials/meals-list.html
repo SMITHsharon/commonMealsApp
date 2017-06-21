@@ -51,7 +51,7 @@
       </thead>
       <tbody>
         
-        <tr class="active" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date" ng-if="meal.signedUp !== null">
+        <tr class="info" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date" ng-if="meal.signedUp !== null">
           
           <td>
             <a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
