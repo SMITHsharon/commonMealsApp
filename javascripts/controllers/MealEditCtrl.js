@@ -32,12 +32,12 @@ app.controller("MealEditCtrl", function($location, $routeParams, $rootScope, $sc
 			$scope.selectedMembers.forEach((thisMember) => {
 				CookTeamFactory.assignCook(mealId, thisMember)
 				.then((resolve) => {
-					$location.url("/meals/list");
 				})
 				.catch((error) => {
 					console.log(error);
 				});
 			});
+		$location.url('/meals/list');
 		})
 		.catch((error) => {
 			console.log("error on addNewMeal", error);

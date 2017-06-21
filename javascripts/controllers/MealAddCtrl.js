@@ -14,7 +14,7 @@ app.controller("MealAddCtrl", function($http, $location, $q, $rootScope, $scope,
 			$scope.selectedMembers.forEach((thisMember) => {
 				CookTeamFactory.assignCook(mealId, thisMember)
 				.then((resolve) => {
-					$location.url("/meals/list");
+					$location.url('/meals/list');
 				})
 				.catch((error) => {
 					console.log(error);
