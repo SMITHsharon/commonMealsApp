@@ -37,6 +37,7 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 					$scope.meals[i].cookNames = cookNamez;
 
 					// get if current user is signed up for this meal 
+					$scope.meals[i].signedUp = false;
 					for (let j=0; j<$scope.signUps.length; j++) {
 						if ($scope.meals[i].id == $scope.signUps[j].mealId) {
 							$scope.meals[i].signedUp = true;
@@ -90,15 +91,16 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 			if ($scope.signUps[i].mealId === mealId) {
 				signUpId = $scope.signUps[i].id;
 			}
-			SignUpFactory.deletzSignUp(signUpId)
-			.then(() => {
-				$scope.meals = {};
-				getMeals();
-			})
-			.catch((error) => {
-			console.log("error on deleteSignUp", error);
-			});
 		}
+		SignUpFactory.deletzSignUp(signUpId)
+		.then(() => {
+			$scope.meals = {};
+			getMeals();
+		})
+		.catch((error) => {
+		console.log("error on deleteSignUp", error);
+		});
+		
 	};
 
 
