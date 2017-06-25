@@ -1,42 +1,22 @@
 <div class="container mealViewPage">
 	<div class="row">
-		<div class="col-xs-6 mealInfo">
+		<div class="col-xs-5 mealInfo">
 
 			<h1 class="tableTitle">What's for Dinner?</h1>	
 			<h4 class="menuHead"><span class="menuData">{{thisMeal.menu}}</span></h4>
 			<h4 class="menuHead">Veggie Option: <span class="menuData">{{thisMeal.veggie}}</span></h4>
 
-			<table class="table mealTable">
-				<tr class="mealInfo">
-					<td class="mealLabel">Meal Date:</td>
-					<td class="mealValue">{{thisMeal.mealDate | date : format : shortDate}}</td>
-				</tr>
-				<tr>
-					<td class="mealLabel">Time:</td>
-					<td class="mealValue">{{thisMeal.time}}</td>
-				</tr>
-				<tr>
-					<td class="mealLabel">Sign-Up Deadline:</td>
-					<td class="mealValue">{{thisMeal.deadline | date : format : shortDate}}</td>
-				</tr>
-				<tr >
-					<td class="mealLabel">Cook Team:</td>
-					<td class="mealValue"><span ng-repeat="cook in cooks" class="cooks">{{cook}} </span></td>
-				</tr>
-				<tr>
-					<td class="mealLabel">Expected Cost:</td>
-					<td class="mealValue">{{thisMeal.estCost}}</td>
-				</tr>
-				<tr>
-					<td class="mealLabel">Comments:</td>
-					<td class="mealValue">{{thisMeal.comments}}</td>
-				</tr>
-				<tr>
-					<td class="mealLabel">Actual Cost:</td>
-					<td class="mealValue">tbd</td>
-				</tr>
-			</table>
-			
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h5 class="dates">{{thisMeal.mealDate | date : format : shortDate}}, {{thisMeal.time}}</h5>
+					<h5 class="dates">Sign-Up Deadline: {{thisMeal.deadline | date : format : shortDate}}</h5>
+					<h5>Cook Team: 
+						<span ng-repeat="cook in cooks" class="cooks">{{cook}} </span></h5>
+					<h5>Comments: {{thisMeal.comments}}</h5>
+					<h5>Expected Cost: {{thisMeal.estCost}}</h5>
+					<h5>Actual Cost: tbd</h5>
+				</div>		
+			</div>
 						
 			<a href="#!/meal/edit/{{thisMeal.id}}"><button type="button" class="btn btn-primary btn-xs editMeal" ng-click="editMeal(meal.id)">Edit Meal</button></a>
 
@@ -48,7 +28,7 @@
 				<h1 class="tableTitle">Guest List <a href="#!/meal/signup/{{thisMeal.id}}"><button class="btn btn-primary btn-xs signUpButton pull-right">Sign Up</button></a></h1>
 			</div>
 		
-			<table class="table guestListTable">
+			<table class="table table-hover table-condensed guestListTable">
 			    <thead class="thead-default tableHead">
 					<tr>
 				       <th></th>
