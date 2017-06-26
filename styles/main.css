@@ -67,7 +67,7 @@ h1 {
   .mealViewPage .mealInfo .btn {
     margin-top: 0; }
   .mealViewPage .panel {
-    border: 1px solid #1F70B8;
+    border: 1px solid #106582;
     border-radius: 5px;
     background-color: #C7DDF0; }
     .mealViewPage .panel .panel-body .dates {
@@ -107,22 +107,31 @@ h1 {
 .mealSignUpPage {
   font-family: "Istok Web", sans-serif;
   margin-top: 80px; }
-  .mealSignUpPage h2, .mealSignUpPage h3 {
+  .mealSignUpPage h1, .mealSignUpPage h4 {
     font-family: "Dancing Script", cursive;
     color: #D40473; }
-  .mealSignUpPage h3.menuHead {
-    margin-top: 0;
-    margin-bottom: 0; }
   .mealSignUpPage .mealInfo .menuHead {
     font-family: "Dancing Script", cursive;
     font-size: 1.2em;
     color: #D40473; }
   .mealSignUpPage .mealInfo .menuData {
     font-size: 1.5em; }
-  .mealSignUpPage .mealInfo .thisCook {
-    padding-right: 7px; }
+  .mealSignUpPage .mealInfo .btn {
+    margin-top: 0; }
+  .mealSignUpPage .panel {
+    border: 1px solid #106582;
+    border-radius: 5px;
+    background-color: #C7DDF0; }
+    .mealSignUpPage .panel .panel-body .dates {
+      color: #D40473; }
+    .mealSignUpPage .panel .panel-body .cooks {
+      padding-right: 12px;
+      font-family: "Dancing Script", cursive;
+      color: #D40473; }
   .mealSignUpPage .checkBoxSection {
     padding-left: 35px; }
+    .mealSignUpPage .checkBoxSection .checkbox {
+      margin-top: 0; }
   .mealSignUpPage .guestListSection h3 {
     margin-top: 89px; }
   .mealSignUpPage .guestListTable {
