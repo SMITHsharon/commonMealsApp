@@ -23,16 +23,38 @@
 			font-size: 1.5em;
 		}
 
-		.thisCook {
-			padding-right: 7px;
+		.btn { 
+			margin-top: 0;
 		}
 	}
+
+
+	.panel {
+
+		border: 1px solid $darkbluegray;
+		border-radius: 5px;
+		background-color: $lightbluegray;
+
+		.panel-body {
+
+			.dates {
+				color: $burgundy;
+			}
+
+			.cooks {
+				padding-right: 12px;
+				font-family: $dancing;
+				color: $burgundy;
+			}
+		}
+	}
+
 
 
 	.guestListSection {
 
 		h1 {
-			margin-top: 89px;
+			// margin-top: 89px;
 		}
 
 		a .signUpButton {
@@ -42,27 +64,6 @@
 		button { 
 			margin-top: 15px;
 		}
-	}
-
-
-	.mealTable {
-
-		background-color: $lightbluegray;
-		
-		td.mealLabel {
-			text-align: right;
-			font-size: .9em;
-			font-weight: 900;
-		}
-
-		td.mealValue {
-			text-align: left;
-		}
-
-		.cooks {
-			padding-right: 10px;
-		}
-
 	}
 
 

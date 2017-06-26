@@ -3,7 +3,7 @@
     <div class="row newSignUpForm">
 
         <div class="col-xs-6"> <!-- sign-up col -->
-        	<h2 class="tableTitle">Sign-Up Information</h2>
+        	<h1 class="tableTitle">Sign-Up Information</h1>
 
 			<!-- sign-up input fields here -->
 			<form>
@@ -55,7 +55,7 @@
             </form> <!-- form -->
 
 			<div class="guestListSection">
-				<h2 class="tableTitle">Guest List</h2>
+				<h1 class="tableTitle">Guest List</h1>
 				<table class="table guestListTable">
 				    <thead class="thead-default">
 						<tr>
@@ -84,20 +84,23 @@
         </div> <!-- .col -->
     
 
-        <div class="col-xs-6 mealInfo">
-	        <h2 class="tableTitle">What's for Dinner?</h2>
-	        <h3 class="menuHead">Menu: {{thisMeal.menu}}</h3>
-			<h3 class="menuHead">Veggie Option: {{thisMeal.veggie}}</h3>
+        <div class="col-xs-5 mealInfo">
+	        <h1 class="tableTitle">What's for Dinner?</h1>
+	        <h4 class="menuHead">Menu: {{thisMeal.menu}}</h4>
+			<h4 class="menuHead">Veggie Option: {{thisMeal.veggie}}</h4>
 
-			<h5 class="cooks">Cook Team: <span class="thisCook" ng-repeat="cook in cooks">{{cook}} </span></h5>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<h5 class="dates">Meal Date: {{thisMeal.mealDate | date : format : shortDate}}, {{thisMeal.time}}</h5>
+					<h5 class="dates">Sign-Up Deadline: {{thisMeal.deadline | date : format : shortDate}}</h5>
 
-			<h5>Meal Date: {{thisMeal.mealDate | date : format : shortDate}}</h5>
-			<h5>Time: {{thisMeal.time}}</h5>
-			<h5>Deadline for Sign-Up: {{thisMeal.deadline | date : format : shortDate}}</h5>
+					<h5>Cook Team: 
+						<span ng-repeat="cook in cooks" class="cooks">{{cook}} </span></h5>
 
-			<h5>Comments: {{thisMeal.comments}}</h5>
-			<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
+					<h5>Comments: {{thisMeal.comments}}</h5>
+					<h5>Expected Cost: ${{thisMeal.estCost}}</h5>
+				</div>		
+			</div>
         </div> <!-- .col -->
     </div> <!-- .row -->
-
 </div> <!-- .container -->
