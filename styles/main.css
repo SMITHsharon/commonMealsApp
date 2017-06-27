@@ -44,6 +44,13 @@ h1 {
     background-color: #C7DDF0; }
     .mealsListPage table .tableHead {
       font-weight: 900; }
+    .mealsListPage table td th.buttonTD {
+      padding-right: 0; }
+    .mealsListPage table td td.buttonTD {
+      padding-right: 0; }
+    .mealsListPage table td .btn {
+      margin-top: 0;
+      padding-top: 0; }
     .mealsListPage table td .signUpButton {
       padding-right: 5px; }
     .mealsListPage table td .thisDate {
@@ -76,6 +83,9 @@ h1 {
       padding-right: 12px;
       font-family: "Dancing Script", cursive;
       color: #D40473; }
+  .mealViewPage .btn {
+    margin-top: 0;
+    padding-top: 0; }
   .mealViewPage .guestListSection a .signUpButton {
     font-family: "Istok Web", sans-serif; }
   .mealViewPage .guestListSection button {
@@ -86,6 +96,14 @@ h1 {
       font-weight: 900; }
     .mealViewPage .guestListTable th, .mealViewPage .guestListTable td {
       text-align: center; }
+    .mealViewPage .guestListTable .buttonTD {
+      padding-left: 0;
+      padding-right: 0; }
+    .mealViewPage .guestListTable .btn {
+      margin-top: 0;
+      padding-top: 0; }
+    .mealViewPage .guestListTable .deleteSignUp {
+      margin-top: 3px; }
 
 .mealAddPage {
   font-family: "Istok Web", sans-serif;
@@ -102,6 +120,8 @@ h1 {
     .mealAddPage .checkBoxSection .checkbox {
       margin-top: 0; }
   .mealAddPage .btn {
+    margin-top: 0;
+    padding-top: 0;
     margin-right: 10px; }
 
 .mealSignUpPage {

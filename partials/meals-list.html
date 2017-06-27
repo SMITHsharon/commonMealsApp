@@ -10,7 +10,7 @@
   <table class="table table-sm">
     <thead class="tableHead">
       <tr>
-        <th class="tableHead">Sign Up</th>
+        <th class="tableHead buttonTD"">Sign Up</th>
         <th>Meal Date</th>
         <th>Time</th>
         <th>Cook Team</th>
@@ -22,7 +22,7 @@
 
       <tr class="info" ng-repeat="meal in meals | isAfter:date | filter:{signedUp:false}" ng-if="meal.signedUp !== null">
         
-        <td><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-primary btn-xs signUpButton">Sign Up</button></a></td>
+        <td class="buttonTD"><a href="#!/meal/signup/{{meal.id}}"><button ng-show="isAfterDeadline(meal)" type="button" class="btn btn-primary btn-xs signUpButton">Sign Up</button></a></td>
 
         <td class="thisDate"><a href="#!/meal/view/{{meal.id}}">{{meal.mealDate | date : format : shortDate}}</a></td>
 
@@ -41,7 +41,7 @@
     <h1 class="tableTitle">Meals You've Signed Up For</h1>
     <table class="table table-condensed">
         <tr>
-          <th>Edit/Delete Your Sign-Ups</th>
+          <th class="buttonTD">Edit/Delete Your Sign-Ups</th>
           <th>Meal Date</th>
           <th>Time</th>
           <th>Cook Team</th>
@@ -53,7 +53,7 @@
         
         <tr class="info" ng-repeat="meal in meals | filter:{signedUp:true} | isAfter:date" ng-if="meal.signedUp !== null">
           
-          <td>
+          <td class="buttonTD">
             <a href="#!/meal/signup/edit/{{meal.id}}"><button class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
             
             <button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(meal.id)">Delete Sign-Up</button>
