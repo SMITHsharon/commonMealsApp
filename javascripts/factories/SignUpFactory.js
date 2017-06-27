@@ -86,6 +86,27 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	};
 
 
+	let postCookTeamSignUp = (mealId, memberId) => {
+	    return $q((resolve, reject) => {
+	      $http.post(`${FIREBASE_CONFIG.databaseURL}/signUps.json`, 
+	        JSON.stringify({ 
+	          memberId: memberId,
+	          mealId: mealId,
+	          adults: 1,
+	          regularMeal: true,
+	          comments: "on Cook Team"
+	        })
+	      )
+	      .then((postCookTeamSignUp) => {
+	        resolve(postCookTeamSignUp);
+	      })
+	      .catch((postCookTeamSignUpError) => {
+	        reject(postCookTeamSignUpError);
+	      });
+	    });
+	}
+
+
 	let editSignUp = (signUp) => {
 		return $q((resolve, reject) => {
 			$http.put(`${FIREBASE_CONFIG.databaseURL}/signUps/${signUp.id}.json`, JSON.stringify({
@@ -125,6 +146,7 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
  		getUserSignUpz:getUserSignUpz,
  		getSingleSignUp:getSingleSignUp,
  		postNewSignUp:postNewSignUp,
+ 		postCookTeamSignUp:postCookTeamSignUp,
  		editSignUp:editSignUp,
  		deletzSignUp:deletzSignUp
  	};
