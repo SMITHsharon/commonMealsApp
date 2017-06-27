@@ -1,4 +1,4 @@
-app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
+app.factory("CookTeamFactory", function($http, $q, UserFactory, SignUpFactory, FIREBASE_CONFIG) {
 
 	let getCookTeam = (mealId) => {
 	    let cookz = [];
@@ -41,6 +41,15 @@ app.factory("CookTeamFactory", function($http, $q, UserFactory, FIREBASE_CONFIG)
 	        })
 	      )
 	      .then((postCookSuccess) => {
+
+	      	// automatically sign-up Cook Team member for the Meal
+	      	SignUpFactory.postCookTeamSignUp(mealId, memberId)
+	      	.then((response) => {
+	      		// resolve(postCookSuccess)
+	      	})
+	      	.catch((postCookTeamSignUpError) => {
+	      		reject(postCookTeamSignUpError)
+	      	})
 	        resolve(postCookSuccess);
 	      })
 	      .catch((postCookError) => {
