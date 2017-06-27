@@ -50,6 +50,11 @@
 	}
 
 
+	.btn {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
 
 	.guestListSection {
 
@@ -77,6 +82,20 @@
 
 		th, td {
 			text-align: center;
+		}
+
+		.buttonTD {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.btn {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		.deleteSignUp {
+			margin-top: 3px;
 		}
 	}
 

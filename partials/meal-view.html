@@ -34,7 +34,7 @@
 			<table class="table table-hover table-condensed guestListTable">
 			    <thead class="thead-default tableHead">
 					<tr>
-				       <th></th>
+				       <th class="buttonTD"></th>
 				       <th></th>
 				       <th># Adults</th>
 				       <th># Children</th>
@@ -46,10 +46,10 @@
 			    <tbody>
 			    	<tr class="info" ng-repeat="signUp in signUps | filter: thisMeal.id">
 			        
-			        	<td ng-show="user.uid === signUp.memberId">
-			        		<a href="#!/meal/signup/edit/{{thisMeal.id}}"><button type="button" class="btn btn-primary btn-xs signUp">Edit Sign-Up</button></a>
+			        	<td class="buttonTD" ng-show="user.uid === signUp.memberId">
+			        		<a href="#!/meal/signup/edit/{{thisMeal.id}}"><button type="button" class="btn btn-primary btn-xs editSignUp">Edit Sign-Up</button></a>
 
-			        		<button class="btn btn-warning btn-xs signUp" ng-click="deleteSignUp(thisMeal.id)">Delete Sign-Up</button>
+			        		<button class="btn btn-warning btn-xs deleteSignUp" ng-click="deleteSignUp(thisMeal.id)">Delete Sign-Up</button>
 		        		</td>
 		        		<td ng-show="user.uid !== signUp.memberId"></td>
 

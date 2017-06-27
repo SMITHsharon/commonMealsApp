@@ -37,6 +37,19 @@
 
 		td {
 
+			th.buttonTD {
+				padding-right: 0;
+			}
+
+			td.buttonTD {
+				padding-right: 0;
+			}
+
+			.btn {
+				margin-top: 0;
+				padding-top: 0;
+			}
+
 			.signUpButton {
 				padding-right: 5px;
 			}
@@ -51,6 +64,7 @@
 
 		}
 	}
+
 
 	.signUpTable {
 		margin-top: 50px;
