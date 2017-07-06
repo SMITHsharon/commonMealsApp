@@ -48,8 +48,8 @@ app.factory("CookTeamFactory", function($http, $q, UserFactory, SignUpFactory, F
 	      		// resolve(postCookSuccess)
 	      	})
 	      	.catch((postCookTeamSignUpError) => {
-	      		reject(postCookTeamSignUpError)
-	      	})
+	      		reject(postCookTeamSignUpError);
+	      	});
 	        resolve(postCookSuccess);
 	      })
 	      .catch((postCookError) => {

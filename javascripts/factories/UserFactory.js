@@ -6,8 +6,8 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	        JSON.stringify({ 
 	          uid: authData.uid,
 	          username: authData.username,
-	          unit: authData.unit,
-	          profilePicURL: authData.imgURL
+	          unit: authData.unit
+	          // profilePicURL: authData.imgURL
 	        })
 	      )
 	      .then((storeUserSuccess) => {

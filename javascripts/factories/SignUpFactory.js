@@ -104,7 +104,7 @@ app.factory("SignUpFactory", function($http, $q, UserFactory, FIREBASE_CONFIG) {
 	        reject(postCookTeamSignUpError);
 	      });
 	    });
-	}
+	};
 
 
 	let editSignUp = (signUp) => {
