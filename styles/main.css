@@ -1,19 +1,19 @@
 .navbar {
-  background-color: #C7DDF0; }
-  .navbar li a:link {
+  background-color: #C7DDF0;
+  font-family: "Istok Web", sans-serif; }
+  .navbar .navbar-nav li a:link {
     color: #1F70B8; }
-  .navbar li a:hover {
+  .navbar .navbar-nav li a:hover {
     color: #D40473; }
-  .navbar li a:active {
+  .navbar .navbar-nav li a:active {
     color: #106582; }
   .navbar .logo {
     display: inline-block;
     width: 50px;
     margin-top: -8px; }
-  .navbar .navbar-header a:link {
-    color: #D40473; }
   .navbar .navbar-header .navbar-brand {
-    font-size: 1em; }
+    font-size: 1em;
+    color: #D40473; }
 
 .container {
   margin-top: 150px; }

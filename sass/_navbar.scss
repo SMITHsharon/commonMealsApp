@@ -4,21 +4,24 @@
 .navbar {
 
 	background-color: $lightbluegray;
+	font-family: $istok;
 
-	li {
+	.navbar-nav {
+		li {
 
-		a:link {
-			color: $darkblue;
+			a:link {
+				color: $darkblue;
+			}
+
+			a:hover {
+				color: $burgundy;
+			}
+
+			a:active {
+				color: $darkbluegray;
+			}
+			
 		}
-
-		a:hover {
-			color: $burgundy;
-		}
-
-		a:active {
-			color: $darkbluegray;
-		}
-		
 	}
 
 
@@ -28,14 +31,12 @@
 		margin-top: -8px;
 	}
 
+
 	.navbar-header {
-		a:link {
-			color: $burgundy;
-		}
 
 		.navbar-brand {
 			font-size: 1em;
+			color: $burgundy;
 		}
 	}
-
 }
