@@ -3,8 +3,8 @@ app.controller("AuthCtrl", function($location, $rootScope, $routeParams, $scope,
 	$scope.alerts = [];
 	
 	  $scope.auth = {
-	    email: "sharon@gmail.com",
-	    password: "111111",
+	    // email: "sharon@gmail.com",
+	    // password: "111111",
 	  };
 
 	  if ($location.path() === '/logout') {
@@ -33,7 +33,8 @@ app.controller("AuthCtrl", function($location, $rootScope, $routeParams, $scope,
 	      $scope.alerts.push({msg: error.message});
 	    }).then((registerComplete) => {
 	      logMeIn();
-	    }).catch(() => {
+	    }).catch((error) => {
+	      $scope.alerts.push({msg: error.message});
 	      console.log("addUser error", error);
 	    });
 	  };
