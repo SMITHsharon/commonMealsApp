@@ -8,7 +8,7 @@ My capstone front-end project, this is an app designed for the residents of Germ
 ![Common Meals App on Launch](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20Login%20Register.png)
 
 #### Common Meals App on Launch 
-![Common Meals App on Launch]()
+![Common Meals App on Launch](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20on%20Launch.png)
 
 #### Common Meals App | Add Meal
 ![AddBook1 App on Click to Add New]()
