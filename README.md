@@ -32,7 +32,7 @@ This app is designed for the residents of Germantown Commons to facilitate the s
 - Upon scheduling a meal, people who are assigned to the Cook Team are automatically "signed-up" for the meal. 
 - When a user clicks to edit a meal, or edit the sign-up record for a meal, the fields populate with previously entered data. 
 - When a user clicks to sign-up for a meal, detail information for the meal displays. 
-- The Meal information on the Meals List screen lists all upcoming meals, and filters the meals that the current user has signed-up for to the Signed-Up list below. Meals that have already occured are filtered out and do not appear. 
+- The Meal information on the Meals List screen lists all upcoming meals, and filters the meals that the current user has signed-up for to the Signed-Up list below. Meals that have already occurred are filtered out and do not appear. 
 - If the current date is past a meal's Sign-Up date, there will not be a Sign-Up button for that meal. 
 - Clicking on the Date for any meal displays the detail information for that meal, as well as a list of those who have signed-up (Guest List). If the current user has signed-up, that user will have the option to Edit or Delete the Meal Sign-Up information for that meal. 
 
