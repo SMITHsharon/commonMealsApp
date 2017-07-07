@@ -1,4 +1,4 @@
-app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
+app.factory("UserFactory", function($http, $location, $q, FIREBASE_CONFIG) {
 
 	let addUser = (authData) => {
 	    return $q((resolve, reject) => {
@@ -6,8 +6,8 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	        JSON.stringify({ 
 	          uid: authData.uid,
 	          username: authData.username,
-	          unit: authData.unit
-	          // profilePicURL: authData.imgURL
+	          unit: authData.unit,
+	          profilePicURL: authData.imgURL
 	        })
 	      )
 	      .then((storeUserSuccess) => {
@@ -90,14 +90,15 @@ app.factory("UserFactory", function($http, $q, FIREBASE_CONFIG) {
 	let editUser = (id, updatedInfo) => {
 		return $q((resolve, reject) => {
 		  $http.put(`${FIREBASE_CONFIG.databaseURL}/users/${id.id}.json`, JSON.stringify({
-		        imageURL: updatedInfo.profilePicURL,
+		        profilePicURL: updatedInfo.profilePicURL,
 		        username: updatedInfo.username,
 		        unit: id.unit,
 		        uid: id.uid,
 		        id: id.id
 		  }))
 		  .then((resultz) => {
-		    resolve(resultz);
+		    // resolve(resultz);
+		    $location.url('/meals/list');
 		  })
 		  .catch((error) => {
 		    reject(error);
