@@ -3,6 +3,7 @@
 ### Project Description // Front-End Capstone
 
 This app is designed for the residents of Germantown Commons to facilitate the scheduling of common meals. 
+
 Users (residents) can schedule a meal, be assigned to a cook team when scheduling a meal, and sign-up to attend a meal. 
 
 #### Common Meals App User Login/Register 
