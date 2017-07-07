@@ -26,15 +26,16 @@ This app is designed for the residents of Germantown Commons to facilitate the s
 - must use Firebase, with full CRUD: create, update, delete
 
 #### implemented CRUD ...
-- The app adds a new user upon Register, and automatically completes log-in. 
-- The user can edit the email address, user name, and url for a profile image. 
-- The user can add, edit and delete Meal records. 
+- The app `add`s a new user upon Register, and automatically completes log-in. 
+- The user can `edit` the email address, user name, and url for a profile image. 
+- The user can `add`, `edit` and `delete` Meal records. 
 - Upon scheduling a meal, people who are assigned to the Cook Team are automatically "signed-up" for the meal. 
-- When a user clicks to edit a meal, or edit the sign-up record for a meal, the fields populate with previously entered data. 
+- When a user clicks to `edit` a meal, or `edit` the sign-up record for a meal, the fields populate with previously entered data. 
 - When a user clicks to sign-up for a meal, detail information for the meal displays. 
-- The Meal information on the Meals List screen lists all upcoming meals, and filters the meals that the current user has signed-up for to the Signed-Up list below. Meals that have already occurred are filtered out and do not appear. 
+- The Meal information on the Meals List screen lists all upcoming meals, and `filter`s the meals that the current user has signed-up for to the Signed-Up list below. Meals that have already occurred are filtered out and do not appear. 
 - If the current date is past a meal's Sign-Up date, there will not be a Sign-Up button for that meal. 
-- Clicking on the Date for any meal displays the detail information for that meal, as well as a list of those who have signed-up (Guest List). If the current user has signed-up, that user will have the option to Edit or Delete the Meal Sign-Up information for that meal. 
+- Clicking on the Date for any meal displays the detail information for that meal, as well as a list of those who have signed-up (Guest List). If the current user has signed-up, that user will have the option to `edit` or `delete` the Meal Sign-Up information for that meal. 
+- Meal dates are entered using Angular `datepicker`.
 
 
 
