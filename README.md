@@ -18,6 +18,9 @@ Users (residents) can schedule a meal, be assigned to a cook team when schedulin
 #### Common Meals App | Sign-Up for Meal
 ![AddBook1 App After Add](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20Sign-Up.png)
 
+#### Common Meals App | After Add and Sign-Up
+![AddBook1 App After Add]()
+
 
 ### Project Specs
 - must use Angular
