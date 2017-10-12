@@ -49,7 +49,6 @@ Users (residents) can schedule a meal, be assigned to a cook team when schedulin
 - `css`; `SASS`
 - `JavaScript`
 - `ES6`
-- `jQuery`
 - `Bootstrap`
 - `Angular`
 - `Grunt`
