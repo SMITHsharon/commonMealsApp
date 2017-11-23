@@ -3,11 +3,21 @@
 <div class="container col-xs-4 col-xs-offset-4" ng-if="!user.uid">
 	<div uib-alert ng-repeat="alert in alerts" class="alert-danger">{{alert.msg}}</div>
 	<h1>Common Meals App</h1>
+	<em>Email and Password</em> 
+	<br />Required on Registration and Login
 	<input type="email" id="inputEmail" class="form-control form-spacing" placeholder="Email Address" ng-model="auth.email" required autofocus>
 	<input type="password" class="form-control form-spacing" placeholder="Password" ng-model="auth.password" required>
+
+	<br /><em>Member Name</em> Required on Registration
 	<input type="text" class="form-control form-spacing" placeholder="Member Name" ng-model="auth.username" required>
-	<input type="text" class="form-control form-spacing" placeholder="Profile Picture URL" ng-model="auth.profilePicURL">
+
+	<br /><em>Optional Profile Image</em>
+	<input type="text" class="form-control form-spacing" placeholder="To display a profile image, must enter the URL for the image" ng-model="auth.profilePicURL">
+
+	<!--
 	<input type="text" class="form-control form-spacing" size="15" placeholder="Unit#" ng-model="auth.unit">
+	-->
+	
 
 	<button class="btn btn-xs btn-success col-xs-2 pull-right loginBtn" ng-click="loginUser()">Login</button>
 	<button class="btn btn-xs btn-primary col-xs-2 pull-right registerBtn" ng-click="registerUser()">Register</button>
@@ -17,7 +27,7 @@
 	<div><h4>My Account</h4></div>
 	Email: <input type="email" class="form-control form-spacing" ng-model="userUpdate.email">
 	Name: <input type="text" class="form-control form-spacing" ng-model="userUpdate.username">
-	<input type="text" class="form-control form-spacing" placeholder="Profile Picture URL" ng-model="userUpdate.profilePicURL">
+	URL for a profile image (optional):<input type="text" class="form-control form-spacing" placeholder="Profile Picture URL" ng-model="userUpdate.profilePicURL">
 
 	<button class="btn btn-sm btn-success col-xs-2 pull-right updateBtn" ng-click="updateUser()">Update</button>
 </div>

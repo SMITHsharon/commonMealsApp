@@ -3,6 +3,7 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
 
 
 	$scope.meals = [];
+	var tempMeals = [];
 	$scope.cooks = [];
 	$scope.signUps = [];
 	$scope.thisUser = {};
@@ -24,31 +25,35 @@ app.controller("MealListCtrl", function($location, $rootScope, $scope, Schedulin
     	getUserInfo(); // displays user's name on screen
 
 		SchedulingFactory.getMealList().then((mealz) => {
-			$scope.meals=mealz;
+			// store returned mealz data in temp var before scoping to DOM
+			// allows for proper filtering for Sign-Ups
+			tempMeals = mealz;
 
 			// get meals current user is signed-up for
 			getUserSignUps($scope.thisUser.userId); 
 
-			for (let i=0; i<$scope.meals.length; i++) {
+			for (let i=0; i<tempMeals.length; i++) {
 
 				// get Cook Team for each Meal
-				CookTeamFactory.getCookTeam($scope.meals[i].id)
+				CookTeamFactory.getCookTeam(tempMeals[i].id)
 				.then((cookNamez) => {
-					$scope.meals[i].cookNames = cookNamez;
+					tempMeals[i].cookNames = cookNamez;
 
 					// get if current user is signed up for this meal 
-					$scope.meals[i].signedUp = false;
+					tempMeals[i].signedUp = false;
 					for (let j=0; j<$scope.signUps.length; j++) {
-						if ($scope.meals[i].id == $scope.signUps[j].mealId) {
-							$scope.meals[i].signedUp = true;
+						if (tempMeals[i].id == $scope.signUps[j].mealId) {
+							tempMeals[i].signedUp = true;
 
 							// write the screen before overwriting $scope.meals[i].signedUp
 							break; 
 						}
 						else {
-							$scope.meals[i].signedUp = false;
+							tempMeals[i].signedUp = false;
 						}
 					}
+					// write the mealz data to the DOM, filtered according to Sign-Ups
+					$scope.meals = tempMeals;
 				})
 				.catch((error) => {
 					console.log("error on getCookTeam", error);

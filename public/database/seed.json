@@ -1,9 +1,9 @@
 {
     "meals": {
         "meal0": {
-            "mealDate": "2017-05-31T05:00:00.000Z",
+            "mealDate": "2017-11-17T05:00:00.000Z",
             "time": "5:00pm",
-            "deadline": "2017-05-30T05:00:00.000Z",
+            "deadline": "2017-11-15T05:00:00.000Z",
             "uid": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "menu": "Hamburgers, Hot Dogs, Chicken, grilled corn-on-the-cob, salad, ice cream",
             "veggie": "grilled veggies, pasta salad",
@@ -12,9 +12,9 @@
             "comments": "Grilling out for Memorial Day!"
         },
         "meal1": {
-            "mealDate": "2017-06-10T05:00:00.000Z",
+            "mealDate": "2017-12-23T05:00:00.000Z",
             "time": "10:00am",
-            "deadline": "2017-06-08T05:00:00.000Z",
+            "deadline": "2017-12-21T05:00:00.000Z",
             "uid": "9ue2UXVtMubVvm7xfDOP97pAhwC3",
             "menu": "Baked eggs in wine breakfast; meats; fruit dish; biscuits",
             "veggie": "Soysage for vegetarians",
@@ -23,9 +23,9 @@
             "comments": "Dot's famous baked eggs in wine"
         },
         "meal2": {
-            "mealDate": "2017-06-15T05:00:00.000Z",
+            "mealDate": "2017-12-26T05:00:00.000Z",
             "time": "6:30pm",
-            "deadline": "2017-06-13T05:00:00.000Z",
+            "deadline": "2017-12-23T05:00:00.000Z",
             "uid": "gvRgx0QpScQT6x0tQHV3aXZCiYc2",
             "menu": "Chicken Marengo, couscous, salad",
             "veggie": "tofu Marengo",
@@ -34,9 +34,9 @@
             "comments": "Need help w set-up, clean-up!"
         },
         "meal3": {
-            "mealDate": "2017-07-13T05:00:00.000Z",
+            "mealDate": "2017-12-29T05:00:00.000Z",
             "time": "7:00pm",
-            "deadline": "2017-07-12T05:00:00.000Z",
+            "deadline": "2017-12-27T05:00:00.000Z",
             "uid": "sVEKha8AzLMq1cgg6WgpOFMopT52",
             "menu": "Grilled Chicken, Rice, and Salad",
             "veggie": "Grilled Portobellos",
@@ -45,20 +45,20 @@
             "comments": ""
         },
         "meal4": {
-            "mealDate": "2017-07-15T05:00:00.000Z",
+            "mealDate": "2018-01-18T05:00:00.000Z",
             "time": "10:00am",
-            "deadline": "2017-07-13T05:00:00.000Z",
+            "deadline": "2018-12-29T05:00:00.000Z",
             "uid": "BR4xoLsWV1WHHHqtZY63xVuVqJl1",
             "menu": "Eggs, cheese grits, pastries!",
             "veggie": "",
             "estCost": 5.00,
             "actualCost": "",
-            "comments": "Saturday Brunch!"
+            "comments": "New Year's Brunch!"
         },
         "meal5": {
-            "mealDate": "2017-07-19T05:00:00.000Z",
+            "mealDate": "2018-01-05T05:00:00.000Z",
             "time": "6:30pm",
-            "deadline": "2017-07-18T05:00:00.000Z",
+            "deadline": "2018-01-03T05:00:00.000Z",
             "uid": "mn8ogUkUDxgfJ8Rd8VGYJVuYqaG2",
             "menu": "grilled cheese sandwiches, soup, salad",
             "veggie": "",
@@ -67,20 +67,20 @@
             "comments": "sweet and simple; somebody please bring dessert"
         },
         "meal6": {
-            "mealDate": "2017-07-22T05:00:00.000Z",
+            "mealDate": "2018-01-12T05:00:00.000Z",
             "time": "6:30pm",
-            "deadline": "2017-07-21T05:00:00.000Z",
+            "deadline": "2018-01-09T05:00:00.000Z",
             "uid": "VVhfxC1FJlNFiWVTyLeSWrc9mgd2",
             "menu": "salmon, wild rice, salad, pie!, ice cream",
             "veggie": "grilled veggies, pasta salad",
             "estCost": 7.00,
             "actualCost": "",
-            "comments": "Need to know how much salmon to buy by Fri morning"
+            "comments": "Need to know how much salmon to buy by Sat morning"
         },
         "meal7": {
-            "mealDate": "2017-07-19T05:00:00.000Z",
+            "mealDate": "2018-01-16T05:00:00.000Z",
             "time": "6:30pm",
-            "deadline": "2017-07-18T05:00:00.000Z",
+            "deadline": "2018-01-15T05:00:00.000Z",
             "uid": "V7F09zuQSzYH0ATno7VK3kXn8Ty1",
             "menu": "Pizza and galette des rois",
             "veggie": "",
@@ -466,7 +466,8 @@
         "user2": {
             "uid" : "LS3viiwPMkNTRCypSZ5Y6tcDYaU2",
             "username" : "Sharon",
-            "profilePicURL" : "https://pbs.twimg.com/profile_images/781620767066759170/BSTeDGKB.jpg",
+            
+            "profilePicURL" : "https://pbs.twimg.com/profile_images/920519495596244997/jwU90Q6G_400x400.jpg",
             "unit" : "3"
         },
         "user3": {
