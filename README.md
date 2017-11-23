@@ -44,9 +44,7 @@ Users (residents) can schedule a meal, be assigned to a cook team when schedulin
 ### Technologies Used
 - `html`
 - `css`; `SASS`
-- `JavaScript`
-- `ES6`
-- `jQuery`
+- `JavaScript` / `ES6`=
 - `Bootstrap`
 - `Angular`
 - `Grunt`
