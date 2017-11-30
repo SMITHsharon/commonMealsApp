@@ -7,7 +7,7 @@ This app is designed for the residents of Germantown Commons to facilitate the s
 Users (residents) can schedule a meal, be assigned to a cook team when scheduling a meal, and sign-up to attend a meal. 
 
 #### Common Meals App User Login/Register 
-![Common Meals App on Launch](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20Login%20Register.png)
+![Common Meals App on Launch](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/master/screens/Common%20Meals%20App%20Login%20Register.png)
 
 #### Common Meals App on Launch 
 ![Common Meals App on Launch](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20on%20Launch.png)
