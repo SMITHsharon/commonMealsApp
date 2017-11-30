@@ -13,7 +13,7 @@ Users (residents) can schedule a meal, be assigned to a cook team when schedulin
 ![Common Meals App on Launch](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/master/screens/Common%20Meals%20App%20on%20Launch.png)
 
 #### Common Meals App | Add Meal
-![AddBook1 App on Click to Add New](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20Add%20Meal.png)
+![AddBook1 App on Click to Add New](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/master/screens/Common%20Meals%20App%20Add%20Meal.png)
 
 #### Common Meals App | Sign-Up for Meal
 ![AddBook1 App After Add](https://raw.githubusercontent.com/SMITHsharon/commonMealsApp/screens/screens/Common%20Meals%20App%20Sign-Up.png)
